@@ -1,0 +1,838 @@
+
+
+body, html {
+  height: 100%;
+}
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a {
+   
+    text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  padding-top: 110px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container1 {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+.container2 {
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f1dfd1;
+  background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+}
+
+.container3 {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
+/******************************************************************
+                            start of navigation 
+********************************************************************/
+
+.navbar{
+   background-color: #009900;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-brand{
+   color: #FFFFFF;
+}
+
+.navbar-toggler{
+   border-color: #FFFFFF;
+}
+
+.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.btn-danger {
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+
+.btn-warning {
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+
+/******************************************************************
+                            start of google toolbar
+********************************************************************/
+
+.goog-te-banner-frame.skiptranslate
+{
+  display: none !important;
+}
+
+body
+{
+  top: 0px !important;
+}
+
+
+/******************************************************************
+                            start top section
+********************************************************************/
+.page-section-heading1{
+	margin-top:-80px;
+}
+
+body{
+   background-image:url('../images/cloud-horizon.jpg');
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.logo{
+  text-align: center;
+   display: block; 
+  
+}
+
+.logo img {
+   margin-top: 200px;  
+}
+
+.center_btn {
+    text-align: center;
+    margin-top: 40px;
+    padding: 0.9%;
+	height: 160px;
+    list-style-type: none;
+    font-size: 18px;
+
+}
+
+.center_btn p a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #1672c4;
+    padding: 20px;
+    width: 100%;  
+    height: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.center_btn p a:hover{
+   color: #1672c4;
+   background-color: #f3f6f9;
+}
+
+.fa-gem{
+	color:#1672c4;
+	
+}
+
+.center_btn1 {
+    text-align: center;
+    padding: 0.9%;
+	height: 140px;
+    list-style-type: none;
+    font-size: 18px;
+    background-color: #f1dfd1;
+    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+	
+}
+
+.center_btn1 p a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #1672c4;
+    padding: 20px;
+    width: 100%;  
+    height: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.center_btn1 p a:hover{
+   color: #1672c4;
+   background-color: #f3f6f9;
+}
+
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+
+                                                        Column Sizes
+                                                            
+******************************************************************************************************************************
+******************************************************************************************************************************/
+
+.dynamicTile .col-sm-2.col-xs-4{
+    padding:3px;
+}
+
+.dynamicTile .col-sm-4.col-xs-8{
+    padding:3px;
+
+}
+
+
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+
+                                                      Page Sections
+                                                            
+******************************************************************************************************************************
+******************************************************************************************************************************/
+
+
+
+.page-section .page-section-heading {
+  font-size: 2.25rem;
+  line-height: 2rem;
+}
+
+
+i {
+ font-family: FontAwesome;
+ 
+ 
+}
+
+
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+
+                                                            TILE BOXES
+                                                            
+******************************************************************************************************************************
+******************************************************************************************************************************/
+
+.tile:hover {
+  opacity: 0.6;
+  filter: alpha(opacity=20); /* For IE8 and earlier */
+}
+
+#tile1{
+    background: rgb(255,0,0);  /** color - red (About Box) **/
+   height: 100%;
+}
+
+#tile2{
+    background: rgb(0,128,0);  /** color - green (Suggestion Box) **/
+   height: 100%;
+}
+
+#tile3{
+    background: rgb(255,255,0);  /** color - yellow (Plans Box) **/
+   height: 100%;
+}
+
+#tile4{
+     background: rgb(0,93,233);  /** color - blue (Payments Box) **/
+    height: 100%;
+}
+
+#tile5{
+    background: rgb(128,0,128);  /** color - purple (Credits Box , Kunnec Tuts Box) **/
+    height: 100%;
+}
+
+#tile6{
+    background: rgb(255,165,0);  /** color - orange (Language Box , Kunnec Shop Box) **/
+   height: 100%;
+}
+
+#tile7{
+    background: rgb(255,20,147);  /** color - pink (Kunnec Social Box) **/
+    height: 100%;
+}
+
+#tile8{
+    background: rgb(0,0,205);  /** color - navy blue (Kunnec to Me Box , Kunnec Show Box) **/
+   height: 100%;
+}
+
+#tile9{
+    background: rgb(0,142,0);  /** color - green (Kunnec Sell Box) **/
+   height: 100%;
+}
+
+#tile10{
+    background: rgb(128,0,0);  /** color - maroon (Kunnec Teach Box) **/
+    height: 100%;
+}
+
+#tile11{
+    background: rgb(128,0,0);  /** color - maroon (Kunnec Vid Box) **/
+   height: 100%;
+}
+
+#tile12{
+    background: rgb(210,105,30);  /** color - burned orange (Kunnec to You Box) **/
+   height: 100%;
+}
+
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+
+                                                     Tile Icon
+                                                            
+******************************************************************************************************************************
+******************************************************************************************************************************/
+
+.tilecaption{  /** color - white (Kunnec Social and Kunnec Teach Icon) **/
+    position: relative;
+    margin:0!important;
+    text-align: center;
+    color:white; 
+    padding-top: 10%;  
+}
+
+.tilecaption6{  /** color - white (All Icons) **/
+    position: relative;
+    margin:0!important;
+    text-align: center;
+    color:white;
+     opacity: 1;
+     transition: .5s ease;
+     backface-visibility: hidden;
+    padding-top: 20%;    
+}
+
+.tilecaption8{  /** color - black (Payouts Icon) **/
+    position: relative;  
+    margin:0!important;
+    text-align: center;
+    color:black;
+   font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-weight: lighter;
+   padding-top: 20%;
+}
+
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+
+                                                      Tile  Words _Start
+                                                            
+******************************************************************************************************************************
+******************************************************************************************************************************/
+.tilecaption7{  /** color - black (Payouts Words) **/
+    position: relative;
+    margin:0!important;
+    text-align: center;
+    color:black;
+   font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-size: 25px;
+    font-weight: lighter;
+    padding-bottom: 20%; 
+}
+
+.tilecaption5{ /** color - white (All Words) **/
+    position: relative;
+   margin:0!important;
+    text-align: center;
+    color:white;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-size: 25px;
+    font-weight: lighter;
+    padding-bottom: 20%;  
+}
+
+.tilecaption2{  /** color - white (Kunnec Social and Kunnec Teach Words) **/
+    position: relative;
+    margin:0!important;
+    text-align: center;
+    color:white;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-size: 25px;
+    font-weight: lighter;
+    padding-bottom: 20%; 
+}
+
+
+
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+
+                                                   Kunnec Screen Image
+                                                            
+******************************************************************************************************************************
+******************************************************************************************************************************/
+
+.tinted-image {
+    background: linear-gradient(
+                                 rgba(148,0,211,0.45),
+                                 rgba(148,0,211,0.45)
+                                 ),
+                                 
+                                 url(picture/woman.jpg);
+                                 
+    background-repeat: no-repeat;
+    background-size: 1200px 250px;
+}
+
+.tilecaption3{  /** color - white (Kunnec Screen Words) **/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(60.5%);
+    -ms-transform: translateY(50%);
+    margin:0!important;
+    text-align: center;
+    color:white;
+    font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-weight: lighter;
+}
+
+.tilecaption4{  /** color - white (Kunnec Screen Icon) **/
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(50%);
+    margin:0!important;
+    text-align: center;
+    color:white;
+   font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    font-size: 42px;
+    font-weight: lighter;
+    padding: 6.3%;
+}
+
+footer {
+  padding: 5px;
+  background-color: #009900;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer a{
+  color: #FFFFFF;
+}
+
+.copyright_k{
+    color: #FFFFFF;
+	font-size: 10px;
+}
+/*****************************************************************************************************************************
+******************************************************************************************************************************
+
+                                                   End of kunnec Screen Image
+                                                            
+******************************************************************************************************************************
+******************************************************************************************************************************/
+
+.container_T {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.container_T:hover .image {
+  opacity: 0.3;
+}
+
+.container_T:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+
+
+
+/******************************************************************
+                            start Pricing section
+********************************************************************/
+
+
+.pricing-wrapper {
+	display: flex;
+    justify-content: center; 
+	padding-top: 50px;
+}
+
+.pricing-table {
+    margin: 0 40px;
+    text-align: center;
+    width: 300px;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.pricing-table:hover {
+    -webkit-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+    transform: scale(1.06);
+}
+
+.pricing-title {
+    color: #FFF;
+    background: #239B56;
+    padding: 20px 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+
+.pricing-table-title a {
+    font-size: 0.6em;
+}
+
+
+
+.pricing-table.recommended .pricing-title {
+    background: #F39C12;
+}
+
+.pricing-table.recommended .pricing-action {
+    background: #F39C12;
+}
+
+.pricing-table .price {
+    background: #000000;
+    color: #FFFFFF;
+    font-size: 2.4em;
+    font-weight: 700;
+    padding: 2px 0;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+
+.pricing-table .price sup {
+    font-size: 0.4em;
+    position: relative;
+    left: 0px;
+}
+
+.table-list{
+    background: #FFF;
+    color: #403d3a;
+	
+}
+
+.table-list li {
+    font-size: 0.9em;
+    font-weight: 700;
+    margin-left: -39.5px;
+	padding: 5px;
+	
+}
+/*
+.table-list li:before {
+    content: "\f058";
+    font-family: 'Font Awesome 5 Free';
+    color: #3fab91;
+    display: inline-block;
+    position: relative;
+    right: 5px;
+    font-size: 16px;
+} 
+
+*/
+
+.table-list li span {
+    font-weight: 400;
+}
+
+.table-list li span.unlimited {
+    color: #FFF;
+    background: #e95846;
+    font-size: 0.9em;
+    padding: 2px 10px;
+    display: inline-block;
+    -webkit-border-radius: 38px;
+    -moz-border-radius: 38px;
+    border-radius: 38px;
+}
+
+
+.table-list li:nth-child(2n) {
+    background: #F0F0F0;
+}
+
+.table-buy {
+    background: #FFF;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.table-buy p {
+    float: center;
+    color: #37353a;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.table-buy p sup {
+    font-size: 0.5em;
+    position: relative;
+    left: 5px;
+	padding-bottom:20px;
+}
+
+.table-buy .pricing-action {
+    color: #FFF;
+    background: #3fab91;
+    padding: 10px 9px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.table-buy .pricing-action:hover {
+    background: #3fab91;
+}
+
+.recommended .table-buy .pricing-action:hover {
+    background: #3fab91;    
+}
+
+.terms{
+	background: #009900;
+	border: 0;
+   outline: 0;
+}
+
+/******************************************************************
+                           Sign up Modal
+********************************************************************/
+
+.theme-wizard .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  text-align: center;
+  color: #748194;
+  display: block;
+}
+
+.theme-wizard .nav-link .nav-item-circle {
+  color: #FF0000;
+  background-color: #fff;
+  border: 2px solid #d8e2ef;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  line-height: 36px;
+  padding: 0;
+  text-align: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: block;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.theme-wizard .nav-link.active {
+  color: #00d27a;
+}
+
+.theme-wizard .nav-link.active .nav-item-circle {
+  background-color: #00d27a !important;
+  color: #fff;
+  border-color: #00d27a;
+}
+
+.theme-wizard .nav-link.done {
+  color: #009900;
+}
+
+.theme-wizard .nav-link.done .nav-item-circle {
+  background-color: #009900 !important;
+  color: #fff;
+  border-color: #009900;
+}
+
+.theme-wizard .nav-link.done .nav-item-circle .check-icon {
+  display: inline-block;
+}
+
+.theme-wizard .nav-link.done .nav-item-circle-parent:before {
+  background-color: #00d27a;
+}
+
+.theme-wizard .nav-link .nav-item-circle .check-icon {
+  display: none;
+}
+
+.theme-wizard .nav-link .nav-item-circle-parent {
+  display: block;
+}
+
+.theme-wizard .nav-link .nav-item-circle-parent:before {
+  content: '';
+  height: 2px;
+  width: 101%;
+  position: absolute;
+  left: 51%;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  background: #d8e2ef;
+}
+
+.theme-wizard .nav-item:not(:first-child) .active .nav-item-circle-parent:after {
+  content: '';
+  width: 50%;
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 2px;
+  background-color: #00d27a;
+}
+
+.theme-wizard .nav-item-circle-parent {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.theme-wizard .nav-item-circle {
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.theme-wizard .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.theme-wizard .nav-item:first-child .nav-item-circle-parent:before, .theme-wizard .nav-item:last-child .nav-item-circle-parent:before {
+  width: 50%;
+}
+
+.theme-wizard .nav-item:first-child .nav-item-circle-parent:before {
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.theme-wizard .nav-item:last-child .nav-item-circle-parent:before {
+  left: 0;
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+}
+
+.theme-wizard .wizard-lottie-wrapper {
+  height: 1px;
+  position: relative;
+  padding-bottom: 190px;
+  overflow: hidden;
+}
+
+.theme-wizard .wizard-lottie-wrapper .wizard-lottie {
+  width: 340px;
+  -webkit-transform: translateY(-73%);
+  -ms-transform: translateY(-73%);
+  transform: translateY(-73%);
+}
+
+.container img .sign-up{ 
+    margin-top: 100px;
+}
+
+h5 .modal-title {
+	margin:0 auto;
+}

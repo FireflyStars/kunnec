@@ -1,0 +1,60 @@
+ figure.studio {
+
+              }
+
+#rec_tl{
+text-align:center;
+color: #000000;
+font-size: 48px;
+ line-height: 1.5;
+}
+
+#rec_body{
+float: left;
+width: 50.3%;
+padding: 8px;
+background-color: #000000 ;
+}
+
+.wht_kr{
+
+color: #1672C4;
+font-size:16px;
+}
+
+.kr_uses {
+  background-color:#FFFFFF;
+  float:left; 
+  width:100%;
+  padding:15px 0px 15px 0px;
+  margin-top:-7px;
+ text-align: center;
+}
+
+.av_chat{
+ background-color:#FFFFFF;
+  float:left;
+  width:100%;
+  padding:15px;
+  margin-top:-7px;
+ text-align: center;
+}
+ ul{  list-style-type: none;]
+
+
+
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .kr_uses, {
+    width:100%;
+  }
+}
+
+@media only screen and (max-width:420px) {
+  /* For mobile phones: */
+ .rec_log {
+    width: 100%;
+   height: 100%;
+  }
+}

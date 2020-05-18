@@ -1,0 +1,24 @@
+
+.button {
+    background-color: #EB984E  ;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+
+.button a {
+    background-color: #EB984E  ;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 12px;
+
+}

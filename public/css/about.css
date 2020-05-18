@@ -1,0 +1,293 @@
+
+/**************************************************** About Us Page ************************************************/
+@font-face {
+    font-family: 'Calibri';
+    src: url('calibri.eot');
+    src: url('calibri.eot?#iefix') format('embedded-opentype'),
+         url('calibri.woff') format('woff'),
+         url('calibri.ttf') format('truetype'),
+         url('calibri.svg#calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.about{
+position: relative;
+ width:100%;
+height: 420px;
+padding:25px;
+
+}
+
+
+
+.tls_vid{
+  position: relative;
+  width:100%;
+  height: 400px;
+  padding:25px;
+  background-color: #EAF2F8;
+}
+
+#srvs_tl{
+  text-align:center;
+  color: #717d7e;
+  font-size: 48px;
+   line-height: 1.5;
+}
+/************************************************************************************************************************
+                                                         END of ABOUT US TEST AREA
+************************************************************************************************************************/
+
+
+@keyframes typing {
+    from { width: 100% }
+    to { width: 0 }
+    
+}
+
+
+.type_holder {
+  position: relative;
+  font-family: arial black; 
+  font-size: 24px;
+ line-height: 1.5;
+  color: #839192 ;
+
+}
+
+p .typing {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  z-index: -1;
+
+}
+
+.hiders {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-family: calibri; 
+}
+
+.hiders p {
+  position: relative; 
+  clear: both; 
+  margin: 0;
+  float: right; /* makes animation go left-to-right */
+  width:0; /* graceful degradation: if animation doesn't work, these are invisible by default */
+  background: white; /* same as page background */
+  animation: typing 3s steps(30, end);
+  animation-fill-mode: both;  /* load first keyframe on page load, leave on last frame at end */
+}
+  
+.hiders p:nth-child(2) {
+  animation-delay: 3s;
+}
+.hiders p:nth-child(3) {
+  animation-delay: 6s;
+}
+.hiders p:nth-child(4) {
+  animation-delay: 9s;
+}
+.hiders p:nth-child(5) {
+  animation-delay: 12s;
+}
+
+
+
+/************************************************************************************************************************
+                                                                   Kunnec Modals
+************************************************************************************************************************/
+.modalDialog {
+        position: fixed;
+        font-family: Arial, Helvetica, sans-serif;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0,0,0,0.8);
+        z-index: 99999;
+        opacity:0;
+        -webkit-transition: opacity 400ms ease-in;
+        -moz-transition: opacity 400ms ease-in;
+        transition: opacity 400ms ease-in;
+        pointer-events: none;
+    }
+
+    .modalDialog:target {
+        opacity:1;
+        pointer-events: auto;
+    }
+
+    .modalDialog > div {
+        width: 360px;
+        position: relative;
+        margin: 2% auto;
+        padding: 5px 20px 13px 20px;
+        border-radius: 10px;
+        background: #fff;
+        background: -moz-linear-gradient(#fff, #999);
+        background: -webkit-linear-gradient(#fff, #999);
+        background: -o-linear-gradient(#fff, #999);
+    }
+
+    .close {
+        background: #1672C4;
+        color: #1672C4;
+        line-height: 5px;
+        position: absolute;
+        right:0px;
+        text-align: center;
+        top: -10px;
+        text-decoration: none;
+        font-weight: bold;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        border-radius: 12px;
+        -moz-box-shadow: 1px 1px 3px #000;
+        -webkit-box-shadow: 1px 1px 3px #000;
+        box-shadow: 1px 1px 3px #000;
+    }
+
+    .close:hover { background: #1672C4; }
+
+.title_wrds{
+color: #1672C4;
+width: 310;
+padding-left: 15px;
+font-size: 22px;
+}
+
+
+
+
+
+/************************************************************************************************************************
+                                                                   Kunnec to Me Modal
+************************************************************************************************************************/
+
+
+
+
+/*********************************************End of About Us Page ************************************************/
+
+
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float:left;
+  width:20%;
+  text-align:center;
+background-color: #FFFFFF;
+
+}
+.menu a {
+  background-color: #FFFFFF;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+ 
+}
+
+.menu1 {
+  float:left;
+  width:20%;
+  text-align:center;
+background-color: #FFFFFF;
+
+}
+.menu1 a {
+  background-color: #FFFFFF;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+ 
+}
+
+
+.menu2 {
+  float:left;
+  width:20%;
+  text-align:center;
+background-color: #FFFFFF;
+
+}
+.menu2 a {
+  background-color:#FFFFFF;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+ 
+}
+
+.menu3 {
+  float:left;
+  width:20%;
+  text-align:center;
+background-color: #FFFFFF;
+
+}
+.menu3 a {
+  background-color:#FFFFFF;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+  
+}
+
+.menu4 {
+  float:left;
+  width:20%;
+  text-align:center;
+background-color: #FFFFFF;
+
+}
+.menu4 a {
+  background-color:#FFFFFF;
+  padding:8px;
+  margin-top:7px;
+  display:block;
+  width:100%;
+
+}
+
+.main {
+ margin: auto;
+  width:100%;
+  padding:0 20px;
+
+}
+.right {
+  background-color:#FFFFFF;
+  float:left;
+  width:40%;
+  padding:15px;
+  margin-top:7px;
+  text-align:center;
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .menu1, .menu2, .menu3, .menu4, .right {
+    width:100%;
+  }
+  .btn_words1{
+ text-align:center;
+}
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
