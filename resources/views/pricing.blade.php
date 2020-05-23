@@ -1,4 +1,4 @@
- c @extends('layouts.hf')
+@extends('layouts.hf')
 @section('title', 'Pricing || Kunnec ')
 @section('content')
  <div class="container-fluid">

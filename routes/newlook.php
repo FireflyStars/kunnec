@@ -11,5 +11,6 @@
 |
 */
 Route::prefix('newlook')->namespace('newlook')->group(function(){
-	Route::get('/home', 'homeController@home');
+	Route::get('/main','homeController@main')->name('newlook.landing');
+	Route::get('/home', 'homeController@home')->name('newlook.home');
 });
