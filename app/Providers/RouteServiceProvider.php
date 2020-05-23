@@ -36,6 +36,8 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
+        // new look routes ..
+        $this->mapNewlookRoutes();
 
         //
     }
@@ -52,6 +54,13 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
+    }
+
+    // custom route file ...
+    protected function mapNewlookRoutes()
+    {
+        Route::namespace($this->namespace)
+             ->group(base_path('routes/newlook.php'));
     }
 
     /**
