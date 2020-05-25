@@ -97,17 +97,40 @@
                     </a>
                     <ul class="collapse list-unstyled" id="kunnecSubmenu">
                         <li>
-                            <a href="#"> Kunnec to Me</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                              Kunnec to You
+                            <a href="#kunnectome" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> kunnec to Me
                             </a>
+                            <ul class="collapse list-unstyled" id="kunnectome">
+                                    <li>
+                                        <a href="pages/course/kunnec_courses.php"> Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/course/k_course_pw.php">Settings</a>
+                                    </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="#"> 
-                               Kunnec Shop
-                           </a>
+                            <a href="#kunnectoyou" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> kunnec to You
+                            </a>
+                            <ul class="collapse list-unstyled" id="kunnectoyou">
+                                    <li>
+                                        <a href="pages/course/kunnec_courses.php"> Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/course/k_course_pw.php">Settings</a>
+                                    </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#kunnecshop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> kunnec shop
+                            </a>
+                            <ul class="collapse list-unstyled" id="kunnecshop">
+                                    <li>
+                                        <a href="pages/course/kunnec_courses.php"> Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="pages/course/k_course_pw.php">Settings</a>
+                                    </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#kunneccourseSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Kunnec Courses

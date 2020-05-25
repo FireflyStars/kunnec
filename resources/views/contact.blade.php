@@ -18,7 +18,7 @@
 		<form action="form.php" class="contact-form" method="post">
 	        <div class="form-group">
 	          <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
-	        </div>
+	        </div> 	
 	        <div class="form-group form_left">
 	          <inpcut type="email" class="form-control" id="email" name="em" placeholder="Email" required="">
 	        </div>
