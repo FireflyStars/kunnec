@@ -30,7 +30,9 @@
   
     <body>
 	    <nav class="navbar navbar-expand-lg fixed-top">
-            <a class="navbar-brand" href="#"><img src="images/K_Logo6.png" height="60px" width="80px"/> Kunnec </a>
+            <a class="navbar-brand" href="#">
+                <img src="images/K_Logo6.png" height="60px" width="80px"/> Kunnec 
+            </a>
 			<div id="google_translate_element">
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

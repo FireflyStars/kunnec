@@ -65,87 +65,128 @@
               </button>
             </div>
         </nav>
-    </header><!--/header-->
+    </header>
+    <!--/header-->
     @if ($message = Session::get('success'))
-    <div class="alert alert-success alert-dismissible fade show">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Congrats!</strong> {{ $message }}
-    </div>
+        <div class="alert alert-success alert-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Congrats!</strong> {{ $message }}
+        </div>
     @endif
     @if ($message = Session::get('warning'))
-    <div class="alert alert-danger alert-dismissible fade show">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>warning!</strong>  {{ $message }}
-    </div>
+        <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>warning!</strong>  {{ $message }}
+        </div>
     @endif
     @if ($errors->has('email'))
-    <div class="alert alert-danger alert-dismissible fade show">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Error!</strong> {{ $errors->first('email') }}
-    </div>
+        <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Error!</strong> {{ $errors->first('email') }}
+        </div>
     @endif
     @if ($errors->has('password'))
-    <div class="alert alert-danger alert-dismissible fade show">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Error!</strong> {{ $errors->first('password') }}
-    </div>
+        <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Error!</strong> {{ $errors->first('password') }}
+        </div>
     @endif
-		<br />
-        <section id="middle">
-            <h1>
-            	<b>
-            		<font color="#1672c4"> 
-            			<i class="fa fa-user"></i> Hey ! Admin .. 
-            		</font>
-            	</b>
-            </h1>
-            <hr />
-            <form action="{{ route('admin.login') }}" method="post">
-            	{{ csrf_field() }}
-            	   @if ($message = Session::get('success'))
-	                  <div class="alert alert-success">
-	                    <p>
-	                      {{ $message }}
-	                    </p>
-	                  </div>
-	                @endif
-	                @if ($message = Session::get('warning'))
-	                  <div class="alert alert-warning">
-	                    <p>
-	                      {{ $message }}
-	                    </p>
-	                  </div>
-	                @endif
-            	<div class="form-group">
-            		<label>Email</label>
-                	<input type="text" placeholder="Email" class="form-control" name="email"  />
-            	</div>
-            	<div class="form-group">
-            		<label>Password</label>
-                	<input type="Password" placeholder="Password" class="form-control" name="password" />
-            	</div>
-            	<div class="form-group">
-                	<button type="submit" class="btn btn-info pull-right">Sign In</button>
-            	</div>	
-            </form>
-        </section>
-        <br /><br /> <br /><br /> <br />
-        <footer id="footer1" >
+	<br />
+    <section id="middle">
+        <h1>
+        	<b>
+        		<font color="#1672c4"> 
+        			<i class="fa fa-user"></i> Hey ! Admin .. 
+        		</font>
+        	</b>
+        </h1>
+        <hr />
+        <form action="{{ route('admin.login') }}" method="post">
+        	{{ csrf_field() }}
+        	   @if ($message = Session::get('success'))
+                  <div class="alert alert-success">
+                    <p>
+                      {{ $message }}
+                    </p>
+                  </div>
+                @endif
+                @if ($message = Session::get('warning'))
+                  <div class="alert alert-warning">
+                    <p>
+                      {{ $message }}
+                    </p>
+                  </div>
+                @endif
+        	<div class="form-group">
+        		<label>Email</label>
+            	<input type="text" placeholder="Email" class="form-control" name="email"  />
+        	</div>
+        	<div class="form-group">
+        		<label>Password</label>
+            	<input type="Password" placeholder="Password" class="form-control" name="password" />
+        	</div>
+        	<div class="form-group">
+            	<button type="submit" class="btn btn-info pull-right">Sign In</button>
+        	</div>	
+        </form>
+    </section>
+    <br /><br /> <br /><br /> <br />
+    <footer id="footer1" >
         <ul class="f_links">
-            <li><a href="/about">About</a></li>
-            <li><a href="/plans">Plans</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/kunnec-record">Kunnec Record</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/kunnec-to-me">Kunnec to Me</a></li>
-            <li><a href="/kunnec-to-you">Kunnec to You</a></li>
-            <li><a href="/shop">Kunnec Shop</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Privacy</a></li>
+            <li>
+                    <a href="/about">
+                       About
+                   </a>
+            </li>
+            <li>
+                    <a href="/plans">
+                       Plans
+                   </a>
+            </li>
+            <li>
+                    <a href="/pricing">
+                       Pricing
+                   </a>
+            </li>
+            <li>
+                    <a href="/kunnec-record">
+                       Kunnec Record
+                   </a>
+            </li>
+            <li>
+                   <a href="/contact">
+                       Contact
+                   </a>
+            </li>
+            <li>
+                  <a href="/kunnec-to-me">
+                       Kunnec to Me
+                  </a>
+            </li>
+            <li>
+                  <a href="/kunnec-to-you">
+                      Kunnec to You
+                  </a>
+            </li>
+            <li>
+                  <a href="/shop">
+                      Kunnec Shop
+                  </a>
+            </li>
+            <li>
+                  <a href="#">
+                     Terms
+                 </a>
+            </li>
+            <li>
+                <a href="#">
+                    Privacy
+                </a>
+            </li>
         </ul>
         <div class="copyright_k">
                 Copyright &copy; 2018 <a href="http://www.kunnec.com" title="KUNNEC">KUNNEC</a>        
         </div>
-</footer>    
+    </footer>    
 </body>
 </html> 

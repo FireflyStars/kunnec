@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 class homecontroller extends Controller
 {
+    // mian ..
     public function main(){
     	//return "checking main route";
     	return view('newlook.main');

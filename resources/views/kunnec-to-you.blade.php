@@ -18,7 +18,7 @@
 	.card , .card-header , .card-footer {
 		border-radius:0px;
 		background:white;
-		margin-bottom: 1px;m 
+		margin-bottom: 1px;
 	}
 	.card-body {
 		height:150px;
