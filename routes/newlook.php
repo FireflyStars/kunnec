@@ -12,5 +12,7 @@
 */
 Route::prefix('newlook')->namespace('newlook')->group(function(){
 	Route::get('/main','homeController@main')->name('newlook.landing');
-	Route::get('/home', 'homeController@home')->name('newlook.home');
+	Route::get('/home', 'homeController@home')->name('newlook.home'); 
+	Route::get('/my-schedual','homeController@myschedual')->name('newlook.schedual');
+	
 });
