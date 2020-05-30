@@ -48,6 +48,7 @@ class InformationController extends Controller
           $inf->save(); // save ();
         }
        return redirect()->back()->with('message','Information updated succesfully'); // back ..
+       // jhl
     }
 
     /**
