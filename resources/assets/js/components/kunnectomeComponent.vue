@@ -3,7 +3,6 @@
             <div class="well">
                   <h2>Post a job </h2>
                   <hr />
-
                   <form @submit.prevent="ktm" @keydown="form.onKeydown($event)">
                         <div class="form-goup">
                               <label> 

@@ -9,7 +9,7 @@
 			<b>
 	       		" finding and connecting with anyone in the world who wants to connect with you."	
 			</b>
-		</font>
+		</font> 
 	</label>
 	<hr />
 	<center>

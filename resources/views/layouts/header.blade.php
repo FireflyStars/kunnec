@@ -1,4 +1,4 @@
-<html class="loading" lang="en" data-textdirection="ltr">
+I<html class="loading" lang="en" data-textdirection="ltr">
 <head>
   <title>@yield('title')</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -166,8 +166,7 @@ html {
       </div>
       <div class="navbar-container content">
         <div class="collapse navbar-collapse" id="navbar-mobile">
-          <ul class="nav navbar-nav mr-auto float-left">
-            
+          <ul class="nav navbar-nav mr-auto float-left">  
             <li class="nav-item d-none d-md-block">
               <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
                   <i class="ft-menu"></i>
@@ -179,17 +178,15 @@ html {
                 <input class="input" type="text" id="searchdata" placeholder="Enter Name or username">
               </div>
               <div style="height: 20px; min-width:470px; position: relative; right:20px; top:40px;">
-                <div class="list-group" id="searchoutput">
-                    
-                  </div>
+                <div class="list-group" id="searchoutput">    
+                </div>
               </div>
             </li> 
           </ul>
           @php
             $request = App\model\friendship::where('receiver_id', Auth::user()->id)->get();
             $users   = App\user::all();
-          @endphp
-          
+          @endphp  
           <ul class="nav navbar-nav float-right">
             <li class="nav-item">
               <a class="nav-link nav-link-label" href="{{ Url('/credit') }}">
@@ -207,7 +204,9 @@ html {
                 <font size="4">  
                   <i class="fa fa-user-plus notify-md"></i>
                 </font>
-                <span class="badge badge-pill badge-default badge-danger badge-default badge-up">{{ count($request) }}</span>
+                <span class="badge badge-pill badge-default badge-danger badge-default badge-up">
+                    {{ count($request) }}
+                </span>
               </a>
               <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                 <li class="dropdown-menu-header">
@@ -252,7 +251,11 @@ html {
                       @endforeach
                   @endforeach
                 </li>
-                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
+                <li class="dropdown-menu-footer">
+                  <a class="dropdown-item text-muted text-center" href="javascript:void(0)">
+                     Read all notifications
+                  </a>
+                </li>
               </ul>
             </li>
             <!-- Notification -->
@@ -273,12 +276,18 @@ html {
                 <li class="scrollable-container media-list">
                   <a href="javascript:void(0)">
                     <div class="media">
-                      <div class="media-left align-self-center"><i class="ft-plus-square icon-bg-circle bg-cyan"></i></div>
+                      <div class="media-left align-self-center">
+                        <i class="ft-plus-square icon-bg-circle bg-cyan"></i>
+                      </div>
                       <div class="media-body">
                         <h6 class="media-heading">You have new order!</h6>
                         <p class="notification-text font-small-3 text-muted">Lorem ipsum dolor sit amet, consectetuer elit.</p>
                         <small>
-                          <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">30 minutes ago</time>
+                          <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">
+                             
+                             30 minutes ago
+
+                          </time>
                         </small>
                       </div>
                     </div>
@@ -309,7 +318,9 @@ html {
                   </a>
                   <a href="javascript:void(0)">
                     <div class="media">
-                      <div class="media-left align-self-center"><i class="ft-check-circle icon-bg-circle bg-cyan"></i></div>
+                      <div class="media-left align-self-center">
+                        <i class="ft-check-circle icon-bg-circle bg-cyan"></i>
+                      </div>
                       <div class="media-body">
                         <h6 class="media-heading">Complete the task</h6>
                         <small>
@@ -330,7 +341,11 @@ html {
                     </div>
                   </a>
                 </li>
-                <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
+                <li class="dropdown-menu-footer">
+                  <a class="dropdown-item text-muted text-center" href="javascript:void(0)">
+                     Read all notifications
+                   </a>
+                </li>
               </ul>
             </li>
             <!-- Message -->
@@ -458,21 +473,21 @@ html {
                       <small> <i class="fa fa-edit"></i>Edit Profile</small>
                     </a>      
                   </div>
-                </div>
-              <!--
-              <img src="uploads/{{ Auth::user()->dp }}" height="50px" width="50px" style="border-radius:50%;" />
-              <span class="menu-title" data-i18n=""> 
-                <font size="3" face="Bahnschrift SemiBold" color="#357EBD">
-                  {{ Auth::user()->fname }} {{ Auth::user()->lname }} 
-                </font>
-              </span>
-              <a href="#">
-                <small> <i class="fa fa-edit"></i>Edit Profile</small>
-              </a>
-            -->
-              <!--
-              <span class="badge badge badge-primary badge-pill float-right mr-2">3</span>
-              -->
+               </div>
+                  <!--
+                  <img src="uploads/{{ Auth::user()->dp }}" height="50px" width="50px" style="border-radius:50%;" />
+                  <span class="menu-title" data-i18n=""> 
+                    <font size="3" face="Bahnschrift SemiBold" color="#357EBD">
+                      {{ Auth::user()->fname }} {{ Auth::user()->lname }} 
+                    </font>
+                  </span>
+                  <a href="#">
+                    <small> <i class="fa fa-edit"></i>Edit Profile</small>
+                  </a>
+                -->
+                  <!--
+                  <span class="badge badge badge-primary badge-pill float-right mr-2">3</span>
+                  -->
           </div>
         </li>
         <li class=" nav-item">
@@ -530,11 +545,13 @@ html {
             <span class="menu-title">Kunnec Setup</span>
           </a>
         </li>
-                <li class="menu-item has-child">
+        <li class="menu-item has-child">
           <a href="#" class="menu-link">
-          <i><img src="{{ asset('site/imgs/2me.png') }}" height="30" width="30" style="margin-top:-4px;" /></i>
-          <span class="menu-text">Kunnec to me</span>
-          <!-- <span class="badge badge-success">20+</span> -->
+              <i>
+                <img src="{{ asset('site/imgs/2me.png') }}" height="30" width="30" style="margin-top:-4px;" />
+              </i>
+              <span class="menu-text">Kunnec to me</span>
+              <!-- <span class="badge badge-success">20+</span> -->
           </a>
           <!-- child menu -->
           <ul class="menu">
@@ -555,9 +572,11 @@ html {
         </li>
         <li class="menu-item has-child">
           <a href="#" class="menu-link">
-          <i><img src="{{ asset('site/imgs/2me.png') }}" height="30" width="30" style="margin-top:-4px;" /></i>
-          <span class="menu-text">Kunnec Sell</span>
-          <!-- <span class="badge badge-success">20+</span> -->
+            <i>
+              <img src="{{ asset('site/imgs/2me.png') }}" height="30" width="30" style="margin-top:-4px;" />
+            </i>
+            <span class="menu-text">Kunnec Sell</span>
+            <!-- <span class="badge badge-success">20+</span> -->
           </a>
           <!-- child menu -->
           <ul class="menu">
@@ -578,9 +597,11 @@ html {
         </li>
         <li class="menu-item has-child">
           <a href="#" class="menu-link">
-          <i><img src="{{ asset('site/imgs/2me.png')  }}" height="30" width="30" style="margin-top:-4px;" /></i>
-          <span class="menu-text">Kunnec Yo You</span>
-          <!-- <span class="badge badge-success">20+</span> -->
+            <i>
+              <img src="{{ asset('site/imgs/2me.png')  }}" height="30" width="30" style="margin-top:-4px;" />
+            </i>
+            <span class="menu-text">Kunnec Yo You</span>
+            <!-- <span class="badge badge-success">20+</span> -->
           </a>
           <!-- child menu -->
           <ul class="menu">
@@ -616,50 +637,48 @@ html {
       </ul>
     </div>
   </div>
-
   <!-- The Modal -->
-    <div class="modal fade" id="block">
-      <div class="modal-dialog">
-        <div class="modal-content">
-        
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Blocked users</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>  
-          <!-- Modal body -->
-          <div class="modal-body">
-              <div class="list-group">
-                    @php
-                      $busers = App\model\friend::where('status','block')->where('user_id',Auth::user()->id)->orwhere('friend_id', Auth::user()->id)->get();
-                      $users = App\user::all();
-                    @endphp
-                    @foreach($users as $user)
-                      @foreach($busers as $block)
-                          @if($user->id == $block->friend_id &&  Auth::user()->id == $block->user_id || $user->id == $block->user_id &&  Auth::user()->id == $block->friend_id )
-                            @if(!empty($block)) 
-                             <a href="#" class="list-group-item list-group-item-action" id="{{ $user->id }}" style="border-radius: 0px;">
-                                <img src="uploads/{{ $user->dp }}" height="40px" width="40px" /> 
-                                  <font size="+1">
-                                    {{ Ucfirst($user->name) }}
-                                  </font>
-                                    <button class="btn btn-danger float-right" id="unblock" value="{{ $user->id }}">
-                                      <i class="fa fa-ban"></i> Unblock
-                                    </button>
-                              </a> 
-                            @endif  
-                          @endif
-                      @endforeach
+  <div class="modal fade" id="block">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Blocked users</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div class="list-group">
+                  @php
+                    $busers = App\model\friend::where('status','block')->where('user_id',Auth::user()->id)->orwhere('friend_id', Auth::user()->id)->get();
+                    $users = App\user::all();
+                  @endphp
+                  @foreach($users as $user)
+                    @foreach($busers as $block)
+                        @if($user->id == $block->friend_id &&  Auth::user()->id == $block->user_id || $user->id == $block->user_id &&  Auth::user()->id == $block->friend_id )
+                          @if(!empty($block)) 
+                           <a href="#" class="list-group-item list-group-item-action" id="{{ $user->id }}" style="border-radius: 0px;">
+                              <img src="uploads/{{ $user->dp }}" height="40px" width="40px" /> 
+                                <font size="+1">
+                                  {{ Ucfirst($user->name) }}
+                                </font>
+                                  <button class="btn btn-danger float-right" id="unblock" value="{{ $user->id }}">
+                                    <i class="fa fa-ban"></i> Unblock
+                                  </button>
+                            </a> 
+                          @endif  
+                        @endif
                     @endforeach
-              </div>
-          </div>
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-          </div>
+                  @endforeach
+            </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
       </div>
-    </div>    
+    </div>
+  </div>    
   @yield('content')
   <!-- BEGIN VENDOR JS-->
   <script src="{{ URL::asset('js/app.js')}}" type="text/javascript"></script>

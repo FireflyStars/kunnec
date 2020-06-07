@@ -1,15 +1,11 @@
 <!doctype html>
 <html lang="en">
-
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
 		<!-- Favicons -->
         <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
-
-
         <!-- Bootstrap CSS -->
 		<link href="assets/lib/flatpickr/flatpickr.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('newlook/css/bootstrap.css') }}">
@@ -17,7 +13,7 @@
 		<link rel="stylesheet" href="{{ asset('newlook/css/promo_vids.css') }}">
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
         <title>Kunnec </title>
-		
+
 		<!-- GOOGLE TRANSLATE -->
         <script type="text/javascript">
             function googleTranslateElementInit() {
@@ -181,57 +177,55 @@
 	                        </div>
 	                   
 					        <div class="col-sm-2 col-xs-4">
-							<div class="k_me-image">
-		                        <div id="tile" class="tile">
-    	                            <div class="carousel slide" data-ride="carousel">
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner">
-                                            <div class="item active">
-                                                <div data-toggle="modal" data-target="#portfolioModal8">
-                                                <p class="tilecaption6"><i class="fas fa-user fa-2x"></i></p>
-                                                <p class="tilecaption9">Kunnec to Me</p>
-                                            </div>
-											</div>
+							    <div class="k_me-image">
+    		                        <div id="tile" class="tile">
+        	                            <div class="carousel slide" data-ride="carousel">
+                                           <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <div data-toggle="modal" data-target="#portfolioModal8">
+                                                        <p class="tilecaption6"><i class="fas fa-user fa-2x"></i></p>
+                                                        <p class="tilecaption9">Kunnec to Me</p>
+                                                    </div>
+    											</div>
+                                           </div>
                                         </div>
                                     </div>
-                                </div>
 								</div>
 	                        </div>
 							
 	                        <div class="col-sm-2 col-xs-4">
-							<div class="k_shop-image">
-		                        <div id="tile" class="tile">
-    	                            <div class="carousel slide" data-ride="carousel">
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner">
-                                            <div class="item active">
-											<div data-toggle="modal" data-target="#portfolioModal9">
-                                                <p class="tilecaption6"><i class="fas fa-gifts fa-2x"></i></p>
-                                                <p class="tilecaption9">Kunnec Shop</p>
-												</div>
+							    <div class="k_shop-image">
+    		                        <div id="tile" class="tile">
+        	                            <div class="carousel slide" data-ride="carousel">
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+    											<div data-toggle="modal" data-target="#portfolioModal9">
+                                                    <p class="tilecaption6"><i class="fas fa-gifts fa-2x"></i></p>
+                                                    <p class="tilecaption9">Kunnec Shop</p>
+    												</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 								</div>
 	                        </div>
    	
 	                        <div class="col-sm-4 col-xs-8">
-							<div class="k_community-image">
-		                        <div id="tile" class="tile">
-    	                            <div class="carousel slide" data-ride="carousel">
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner">
-                                            <div class="item active">
-											<div data-toggle="modal" data-target="#portfolioModal10">
-                                                <p class="tilecaption"><i class="fas fa-podcast fa-2x"></i></p>
-                                                <p class="tilecaption2">Kunnec Pod</p>
-										    </div>
+    							<div class="k_community-image">
+    		                        <div id="tile" class="tile">
+        	                            <div class="carousel slide" data-ride="carousel">
+                                            <!-- Wrapper for slides -->
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+        											<div data-toggle="modal" data-target="#portfolioModal10">
+                                                        <p class="tilecaption"><i class="fas fa-podcast fa-2x"></i></p>
+                                                        <p class="tilecaption2">Kunnec Pod</p>
+        										    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-	                        </div>
+    	                        </div>
 							</div>
                         </div>
 
@@ -1677,7 +1671,7 @@
 		
 <!-- Modal Kunnec Shop -->
   <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-     <div class="modal-dialog modal-xl" role="document class="modal-dialog modal-xl" role="document">
+     <div class="modal-dialog modal-xl" role="document" class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h2 class="modal-title" id="exampleModalLongTitle"><font color="1672C4"> Kunnec Shop</font></h2>

@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('newlook/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('newlook/css/home_navsb.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Font Awesome JS -->
     <script type="text/javascript" src="{{ asset('newlook/js/all.min.js') }}"></script>
 	<!-- Google Translate -->
@@ -28,20 +29,20 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar" >
             <div class="sidebar-header">
-                <img src="images/logos/K_Logo6.png" height="40px" width="60px"/>
+                <img src="{{ asset('newlook/images/logos/K_Logo6.png') }}" height="40px" width="60px"/>
             </div>
             <ul class="list-unstyled components">
                 <p>
-                    <img src="images/users/profiles/sabrina.jpg" width="50px" height="50px" class="rounded-circle img-border box-shadow-1" alt="Card image"> Sabrina
+                    <img src="{{ asset('newlook/images/users/profiles/sabrina.jpg') }}" width="50px" height="50px" class="rounded-circle img-border box-shadow-1" alt="Card image"> Sabrina
                 </p>
                 <li>
-                    <a href="#!">
+                    <a href="{{ route('newlook.home') }}">
                         <i class="fas fa-home"></i> Home
                     </a>
-                    <a href="k_my2do.php">
+                    <a href="{{ route('newlook.schedual') }}">
                         <i class="fas fa-pencil-alt"></i> My Schedule
                     </a>
-                    <a href="k_photo_edit.php">
+                    <a href="{{ route('newlook.photoeditor') }}">
                         <i class="fas fa-camera"></i> Photo Editor
                     </a>
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -49,45 +50,63 @@
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#" dats-target="edit-profile">Edit Profile</a>
+                            <a href="{{ route('social.edit-profile') }}" dats-target="edit-profile">
+                                Edit Profile
+                            </a>
                         </li>
                         <li>
-                            <a href="#!">Account Settings</a>
+                            <a href="{{ route('social.account-settings') }}">
+                                Account Settings
+                            </a>
                         </li>
                         <li>
-                            <a href="#!">Account Invoices</a>
+                            <a href="{{ route('social.account-invoice') }}">
+                                Account Invoices
+                            </a>
                         </li>
                         <li>
-                            <a href="#!">Messages</a>
+                            <a href="{{ route('social.messages') }}">
+                                Messages
+                            </a>
                         </li>
                         <li>
-                            <a href="#!">My Kunnecs</a>
+                            <a href="{{ route('social.kunnecs') }}">
+                                My Kunnecs
+                            </a>
                         </li>
                         <li>
-                            <a href="#!">Notifications</a>
+                            <a href="{{ route('social.notification') }}">
+                                Notifications
+                            </a>
                         </li>
                         <li>
-                            <a href="#!">Mutual Kunnecs</a>
+                            <a href="{{ route('social.mutual-kunnecs') }}">
+                                Mutual Kunnecs
+                            </a>
                         </li>
                         <li>
                             <a href="#kunnectomeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Events</a>
                                 <ul class="collapse list-unstyled" id="kunnectomeSubmenu">
                                     <li>
-                                        <a href="#"> Your Events</a>
+                                        <a href="{{ route('social.yourevents') }}"> Your Events</a>
                                     </li>
                                     <li>
-                                        <a href="#"> Create an Event</a>
+                                        <a href="{{ route('social.createevent') }}"> Create an Event</a>
                                     </li>
                                     <li>
-                                        <a href="#"> List of Event Invites</a>
+                                        <a href="{{ route('social.invites') }}"> List of Event Invites</a>
                                     </li>
                                 </ul>
                         </li>
                         <li>
-                            <a href="#!">Archived Posts</a>
+                            <a href="{{ route('social.archived-posts') }}">
+                                Archived Posts
+                            </a>
                         </li>
                         <li>
-                            <a href="#!">Reported Posts</a>
+                            <a href="{{ route('social.reported-posts') }}">
+                                Reported Posts
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -101,10 +120,10 @@
                             </a>
                             <ul class="collapse list-unstyled" id="kunnectome">
                                     <li>
-                                        <a href="pages/course/kunnec_courses.php"> Home</a>
+                                        <a href="{{ route('newlook.tomeadd') }}"> Post Opportunity</a>
                                     </li>
                                     <li>
-                                        <a href="pages/course/k_course_pw.php">Settings</a>
+                                        <a href="{{ route('newlook.tomejobs') }}">opportunities</a>
                                     </li>
                             </ul>
                         </li>
@@ -305,7 +324,7 @@
                 </div>
             </nav>
             <div class="col-lg-12 pr-lg-2">
-                  <div class="card mb-3 mt-3 mt-lg-0">
+                <div class="card mb-3 mt-3 mt-lg-0">
                         <div class="card-body fs--1">
                           <div class="media"><span class="fa fa-bolt fs-0 text-warning"></span>
                             <div class="media-body ml-2">
@@ -315,7 +334,7 @@
                             </div>
                           </div>
                         </div>
-                  </div>
+                </div>
                 <!-- Mid Content -->
                     @yield('content')
                 <!-- End Mid Content -->
@@ -324,7 +343,7 @@
         <!-- Page Content Holder End -->
     </div>
     <!-- End Wrapper -->
-
+    <script src="{{ URL::asset('js/app.js')}}" type="text/javascript"></script>
     <!-- End files  -->
     <script type="text/javascript" src="{{ asset('newlook/js/jquery-3.4.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('newlook/js/sbt.js') }}"></script> 

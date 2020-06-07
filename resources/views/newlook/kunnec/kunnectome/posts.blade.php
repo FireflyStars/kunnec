@@ -1,4 +1,5 @@
 @extends('layouts.newheader.header')
-@section('title', 'Edit Profile')
+@section('title', 'Kunnec | kunnec to me')
 @section('content')
+
 @endsection

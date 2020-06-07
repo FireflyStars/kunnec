@@ -1,4 +1,7 @@
 @extends('layouts.newheader.header')
-@section('title', 'Edit Profile')
+@section('title', 'Messages')
 @section('content')
+<div id="app">
+
+</div>
 @endsection

@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -16,7 +15,7 @@ window.Form = Form;
 Vue.component(HasError.name, HasError)
 Vue.component(AlertError.name, AlertError)
 import swal from 'sweetalert2';
-window.swal =swal;
+window.swal = swal;
 const toast = swal.mixin({
   toast: true,
   position: 'top-end',
@@ -31,7 +30,12 @@ Vue.component('opportunity',require('./components/opportunityComponent.vue')).de
 Vue.component('kunnec-to-you',require('./components/kunnectoyouComponent.vue')).defualt;
 Vue.component('kunnec-to-you-post',require('./components/kunnectoyou/postComponent.vue')).defualt;
 Vue.component('kunnec-to-you-my-services',require('./components/kunnectoyou/myservicesComponent.vue')).defualt;
+
 const app = new Vue({
     el: '#app',
 
 });
+
+
+
+

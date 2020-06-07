@@ -9,7 +9,6 @@
 
     <meta name="robots" content="index, follow">
     <title>Kunnec</title>
-	
 	<!-- core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -21,28 +20,17 @@
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-           <!-- jQuery -->
+    <!-- jQuery -->
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-            <!-- Scripts -->
-    
-
+    <!-- Scripts -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
- 
     <script src="{{ asset('plugins/formsubmit/form.submit.min.js')}}"></script>
-
     <link rel="shortcut icon" href="#">
-    
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-     <script src="{{ asset('js/signup.js') }}" defer></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="{{ asset('js/signup.js') }}" defer></script>
 </head>
 <style type="text/css">
     .btn {

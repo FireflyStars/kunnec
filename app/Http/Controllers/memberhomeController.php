@@ -49,7 +49,8 @@ class memberhomeController extends Controller {
         $cuser     = Auth::user(); // id .
         $social    = Auth::user()->socialmedia; // social media ..
         $information = Auth::user()->information; // getting privacy information ..
-        return view('home.setting',compact('cuser','social','information'));
+        return $cuser;
+        //return view('home.setting',compact('cuser','social','information'));
     }
     // messages ..
     public function messages(){

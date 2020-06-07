@@ -1,4 +1,4 @@
 @extends('layouts.newheader.header')
-@section('title', 'Home')
+@section('title', 'Photoeditor')
 @section('content')
 @endsection

@@ -44,46 +44,46 @@
         </div>
     </nav>
     
-    @yield('content')
+         @yield('content')
 
-            <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="{{ asset('home/jquery/jquery-3.4.1.min.js') }}"></script>
-        <script>
-            jQuery(document).ready(function() {
-              
-              var btn = $('#button_scroll');
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ asset('home/jquery/jquery-3.4.1.min.js') }}"></script>
+    <script>
+        jQuery(document).ready(function() {
+          
+           var btn = $('#button_scroll');
 
-              $(window).scroll(function() {
-                if ($(window).scrollTop() > 300) {
-                  btn.addClass('show');
-                } else {
-                  btn.removeClass('show');
-                }
-              });
+          $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+              btn.addClass('show');
+            } else {
+              btn.removeClass('show');
+            }
+          });
 
-              btn.on('click', function(e) {
-                e.preventDefault();
-                $('html, body').animate({scrollTop:0}, '300');
-              });
+          btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+          });
 
-            });
-        </script>
-        <script src="{{ asset('home/jquery/jquery.easing.min.js')}}"></script>
-        <script src="{{ asset('home/js/popper.min.js') }}"></script>
-        <script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/is_js/is.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/lodash/lodash.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}">
-        </script>
-        <script src="{{ asset('home/assets/lib/jquery-validation/jquery.validate.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/flatpickr/flatpickr.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/dropzone/dropzone.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/lottie/lottie.min.js') }}"></script>
-        <script src="{{ asset('home/assets/js/theme.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/@fortawesome/all.min.js') }}"></script>
-        <script src="{{ asset('home/assets/lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}">
-        </script>
+        });
+    </script>
+    <script src="{{ asset('home/jquery/jquery.easing.min.js')}}"></script>
+    <script src="{{ asset('home/js/popper.min.js') }}"></script>
+    <script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/is_js/is.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/lodash/lodash.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}">
+    </script>
+    <script src="{{ asset('home/assets/lib/jquery-validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/flatpickr/flatpickr.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/dropzone/dropzone.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/lottie/lottie.min.js') }}"></script>
+    <script src="{{ asset('home/assets/js/theme.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/@fortawesome/all.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}">
+    </script>
     </body>
 </html>

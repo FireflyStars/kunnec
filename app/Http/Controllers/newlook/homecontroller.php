@@ -29,6 +29,12 @@ class homecontroller extends Controller
     // photo editor
     public function photoeditor (){
 
-        return view('newlook.photoeditor');
+        return view('newlook.photoeditor.photoeditor');
     }
+    
 }
+
+
+
+
+
