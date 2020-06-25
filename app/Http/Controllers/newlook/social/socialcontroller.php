@@ -10,12 +10,13 @@ use App\model\information;
 class socialcontroller extends Controller
 {
     // 
-    // edit profile 
+    // edit profile .. 
     public function editprofile(){
  
         return view('newlook.social.editprofile');
     }
-    // Account settings
+
+    // Account settings ..
     public function accountsettings(){
         //$cuser     = Auth::user(); // id .
         //echo $cuser;
@@ -30,31 +31,41 @@ class socialcontroller extends Controller
 
     	return view('newlook.social.invoice');
     }
+    
     // messages ..
     public function messages(){
     	
         return view('newlook.social.messages');
     }
+    
     // kunnecs ..
     public function kunnecs(){
 
     	return view('newlook.social.kunnecs');
     }
+    
     // notificaitons ..
     public function notification(){
     	
         return view('newlook.social.notification');
     }
+    
     // mutual kunnecs
     public function mutualk(){
+
     	return view('newlook.social.mutual');
+
     }
+    
     // Archive Posts
     public function archive(){
+
     	return view('newlook.social.archives');
     }
+    
     // reported posts 
     public function reportedposts(){
+
     	return view('newlook.social.reportedpost');
     }
 

@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/about.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/plans.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/plans.css') }}" rel="stylesheet">      
+
     <link href="{{ asset('css/pricing.css') }}" rel="stylesheet">
     <link href="{{ asset('css/record.css') }}" rel="stylesheet">
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">

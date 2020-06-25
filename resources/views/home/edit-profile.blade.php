@@ -16,7 +16,7 @@
   }
   .offline-online {
     color:green;
-  }
+  }*/*
   .membership{
   	background-color: gold;
   }

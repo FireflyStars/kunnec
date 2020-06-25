@@ -20,13 +20,14 @@ class homecontroller extends Controller
     	return view('newlook.home.home');
     }
 
-    // my schedual 
+    // my schedual  ..
     public function myschedual(){
 
         return view('newlook.schedual');
 
     }    
-    // photo editor
+
+    // photo editor ..
     public function photoeditor (){
 
         return view('newlook.photoeditor.photoeditor');

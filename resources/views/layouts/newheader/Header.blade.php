@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title> @yield('title') </title>
 	<!-- Favicons -->
     <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('newlook/bootstrap/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('newlook/css/home_navsb.css') }}">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Font Awesome JS -->
-    <script type="text/javascript" src="{{ asset('newlook/js/all.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('newlook/js/all.min.js') }}"></script>
+
+   <link rel="stylesheet" href="{{ asset('newlook/bootstrap/css/bootstrap.css') }}">
+   <link rel="stylesheet" href="{{ asset('newlook/css/home_navsb.css') }}">
+   <link rel="stylesheet" href="{{ asset('newlook/assets/lib/select2/select2.min.css') }}">
+   <link rel="stylesheet" href="{{ asset('newlook/assets/lib/flatpickr/flatpickr.min.css') }}">
+   <link rel="stylesheet" href="{{ asset('newlook/assets/lib/dropzone/dropzone.min.css') }}">
+
 	<!-- Google Translate -->
     <script type="text/javascript">
         function googleTranslateElementInit()  { 
@@ -23,6 +27,55 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     </script>
 </head>
+<style type="text/css">
+      .opportunity-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .op-list{
+    float: left;
+    margin-left:20px;
+  }
+  .btn {
+    border-radius:0px;
+  }
+  .btn {
+    border-radius: 0px;
+  }
+
+  .jumbotron{
+    background-color: white !important;
+    margin-top:10px;
+  }
+  .card {
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  .card-footer {
+    background-color: white;
+  }
+  .card-header {
+    background-color: white;
+  }
+  a {
+    border-radius: 0px;
+  }
+  .form-control {
+    border-radius: 0px;
+  }
+  button {
+    border-radius: 0px;
+  }
+  .jumbotron{
+    border-radius: 0px;
+  }
+html {
+  scroll-behavior: smooth;
+}
+</style>
 <body>
      <!-- Start Wrapper -->
     <div class="wrapper">
@@ -88,10 +141,10 @@
                             <a href="#kunnectomeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Events</a>
                                 <ul class="collapse list-unstyled" id="kunnectomeSubmenu">
                                     <li>
-                                        <a href="{{ route('social.yourevents') }}"> Your Events</a>
+                                        <a href="{{ route('event.index') }}"> Your Events</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('social.createevent') }}"> Create an Event</a>
+                                        <a href="{{ route('event.create') }}"> Create an Event</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('social.invites') }}"> List of Event Invites</a>
@@ -137,17 +190,20 @@
                                     <li>
                                         <a href="pages/course/k_course_pw.php">Settings</a>
                                     </li>
-                            </ul>
+                            </ul>.
+
+
+
                         </li>
                         <li>
                             <a href="#kunnecshop" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> kunnec shop
                             </a>
                             <ul class="collapse list-unstyled" id="kunnecshop">
                                     <li>
-                                        <a href="pages/course/kunnec_courses.php"> Home</a>
+                                        <a href="{{ route('sells.create') }}"> Create Add </a>
                                     </li>
                                     <li>
-                                        <a href="pages/course/k_course_pw.php">Settings</a>
+                                        <a href="{{ route('sells.index') }}"> Adds </a>
                                     </li>
                             </ul>
                         </li>
@@ -249,7 +305,7 @@
                         </li>
                         <li>
                             <a href="#kunnecPodaccountSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> 
-                                Kunnec Pod
+                                Kunnec pod
                             </a>
                              <ul class="collapse list-unstyled" id="kunnecPodaccountSubmenu">
                                 <li>
@@ -287,7 +343,7 @@
         </nav>
         <!-- End sidebar content-->
         <!-- Page Content Holder -->
-        <div id="content">
+        <div id="content"> 
             <nav class="navbar navbar-expand-lg navbar-custom" style="background-color: #009900;">
                 <div class="container-fluid">
                     <button type="button" id="sidebarCollapse" class="navbar-btn">
@@ -295,7 +351,7 @@
                         <span></span>
                         <span></span>
                     </button>
-                    <form>
+                    <form> v
                          <input type="search" placeholder="Search">
                     </form>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FFFFFF; color: #009900; border-color: #009900;">
@@ -335,21 +391,35 @@
                           </div>
                         </div>
                 </div>
+            
                 <!-- Mid Content -->
                     @yield('content')
                 <!-- End Mid Content -->
+
             </div>
         </div>
         <!-- Page Content Holder End -->
     </div>
+
     <!-- End Wrapper -->
     <script src="{{ URL::asset('js/app.js')}}" type="text/javascript"></script>
+    <!-- other files  -->
+    <script src="{{ asset('js/request.js') }}"></script>
+    <script src="{{ asset('js/signup.js') }}"></script>
+    <script src="{{ asset('js/categories.js') }}"></script>
+    <script src="{{ asset('js/uploads.js') }}"></script>
+
     <!-- End files  -->
     <script type="text/javascript" src="{{ asset('newlook/js/jquery-3.4.1.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('newlook/js/sbt.js') }}"></script> 
-    <script type="text/javascript" src="{{ asset('newlook/assets/js/popper.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('newlook/assets/js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('newlook/assets/lib/@fortawesome/all.min.js') }}"></script>
-    <!-- End files  -->
+    <!-- Sidebar Toggle -->
+    <script type="text/javascript" src="{{ asset('newlook/js/sbt.js') }}"></script>
+    <script src="{{ asset('newlook/assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('newlook/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('newlook/assets/lib/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('newlook/assets/lib/select2/select2.min.js') }}"></script>
+    <script src="{{ asset('newlook/assets/lib/flatpickr/flatpickr.min.js') }}"></script>
+    <script src="{{ asset('newlook/assets/lib/dropzone/dropzone.min.js') }}"></script>
+    <script src="{{ asset('newlook/assets/js/theme.js') }}"></script>
+    <script src="{{ asset('newlook/assets/lib/@fortawesome/all.min.js') }}"></script>
 </body>
 </html>

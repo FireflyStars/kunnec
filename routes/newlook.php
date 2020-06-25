@@ -28,10 +28,11 @@ Route::prefix('newlook')->namespace('newlook')->group(function(){
 		Route::get('mutual-kunnecs','socialcontroller@mutualk')->name('social.mutual-kunnecs');
 		Route::get('archived-posts','socialcontroller@archive')->name('social.archived-posts');
 		Route::get('reported-posts','socialcontroller@reportedposts')->name('social.reported-posts');
-		Route::namespace('events')->prefix('events')->group(function(){
-			Route::get('/your','eventscontroller@yourevents')->name('social.yourevents');
-			Route::get('/create','eventscontroller@create')->name('social.createevent');
-			Route::get('/list','eventscontroller@invites')->name('social.invites');
+		Route::namespace('events')->group(function(){
+			Route::resource('/event','eventscontroller');
+			Route::prefix('event')->group(function(){
+				Route::get('/list','eventscontroller@invites')->name('social.invites');
+			});
 		});
 	});
 	
@@ -41,5 +42,9 @@ Route::prefix('newlook')->namespace('newlook')->group(function(){
        	Route::get('/opportunities','tomeController@jobs')->name('newlook.tomejobs');   
 	});
 	
+	// kunnec sell ..
+	Route::namespace('sell')->group(function(){
+		Route::resource('/sells','sellcontroller');
+	});
 
 });

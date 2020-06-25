@@ -19,7 +19,7 @@ class tomeController extends Controller
         return view('newlook.kunnec.kunnectome.add',compact('category')); // home ..
     }
     public function jobs(){ 
-    	return "asadwdes";
+    	return view('newlook.kunnec.kunnectome.posts'); // home ..
     }
    
 }

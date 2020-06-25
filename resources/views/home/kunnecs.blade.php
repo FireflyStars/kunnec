@@ -12,8 +12,9 @@
 		      		<div class="jumbotron">
 		      		 	<nav class="navbar navbar-expand-lg navbar-light" style="margin-top:-55px; background::none !important;">
 						  <a class="navbar-brand" href="#"><i class="fa fa-users"></i> Kunnecs</a>
-						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls=";.l" aria-expanded="false" aria-label="Toggle navigation">
-						    <span class="navbar-toggler-icon"></span>
+						  <button class="navbar-toggler" type="button" data-toggle="collapse" 
+						  		data-target="#navbarSupportedContent" aria-controls=";.l" aria-expanded="false" aria-label="Toggle navigation">
+						       <span class="navbar-toggler-icon"></span>
 						  </button>
 						  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 						    <ul class="navbar-nav ml-auto">
@@ -63,8 +64,8 @@
 										        	<button value="{{ $friend->id }}" class="btn btn-primary" id="Unfriend">
 										        		<i class="fa fa-trash"></i> Unfriend
 										        	</button>
-										        	<button class="btn btn-warning"><i class="fa fa-eye"></i> 
-										        		View Profile
+										        	<button class="btn btn-warning">
+										        		<i class="fa fa-eye"></i> View Profile
 										        	</button>	
 										        </div> 
 										    </div>

@@ -22,7 +22,7 @@ I<html class="loading" lang="en" data-textdirection="ltr">
   <script src="{{ asset('app-assets/jquery.min.js') }}"></script>
   <script src="{{ asset('app-assets/bootstrap.min.js') }}"></script>
   <link href="{{ asset('plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css') }}" rel="stylesheet" type="text/css" />
-  
+  <link rel="stylesheet" type="text/css" href="" />
 </head>
 <style type="text/css">
   body {

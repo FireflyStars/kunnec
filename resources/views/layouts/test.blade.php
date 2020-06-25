@@ -23,9 +23,9 @@
         </li>
         <li class="menu-item has-child">
           <a href="#" class="menu-link">
-          <i><img src="{{ asset('site/imgs/2me.png') }}" height="30" width="30" style="margin-top:-4px;" /></i>
-          <span class="menu-text">Kunnec Sell</span>
-          <!-- <span class="badge badge-success">20+</span> -->
+            <i><img src="{{ asset('site/imgs/2me.png') }}" height="30" width="30" style="margin-top:-4px;" /></i>
+            <span class="menu-text">Kunnec Sell</span>
+            <!-- <span class="badge badge-success">20+</span> -->
           </a>
           <!-- child menu -->
           <ul class="menu">
