@@ -1,7 +1,7 @@
 <template>
 	<div class="col-lg-12">
 		<!-- Start Card -->
-			<h2> <i class="fa fa-tasks" aria-hidden="true"></i> Opportunities </h2>
+			<label> <i class="fa fa-tasks" aria-hidden="true"></i> Opportunities </label>
 			<hr />
 			<div class="card" v-for="(opprtunity, index) in opportunities">
 				<div class="card-header">
@@ -10,7 +10,11 @@
 				<div class="card-body">
 					 {{ opprtunity.description }}
 					 <br />
-					 <button class="btn btn-info float-right"> <i class="fa fa-arrow-right"></i> Continue..</button>
+					 <a href="index.php">
+						 <button class="btn btn-info float-right"> 
+						   <i class="fa fa-arrow-right"></i> Continue..
+						 </button>
+					 </a>
 				</div>
 				<div class="card-footer">
 					<ul class="opportunity-list">

@@ -1,6 +1,5 @@
-@extends('layouts.hf')
+@extends('layouts.head')
 @section('content')
-<br /> <br /> <br />
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -12,7 +11,6 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf
-
                         <div class="form-group row">
                             <div class="col-md-12">
                                 <input id="fname" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname') }}" placeholder="First Name" required autofocus>
@@ -158,13 +156,6 @@
                             <div class="col-md-3" style="margin-top:5px;">
                                 Diamond
                                 <input type=radio name="plan" value="diamond" />
-                            </div>
-                        </div>
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6">
-                                <button type="submit" data-toggle="modal" data-target="#myModal" class="btn btn-success">
-                                    {{ __('Must Read & Agree With Terms') }}
-                                </button>
                             </div>
                         </div>
                         <div class="form-group row mb-0">

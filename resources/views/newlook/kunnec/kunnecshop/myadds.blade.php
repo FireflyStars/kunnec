@@ -1,7 +1,7 @@
 @extends('layouts.newheader.header')
 @section('title', 'kunnec sell Adds')
 @section('content')
-<h2>Adds</h2>
+<h2>Your Adds</h2>
 	<hr />
 	@if ($message = Session::get('message'))
     <div class="alert alert-success">
@@ -34,21 +34,22 @@
 						<button value="{{ $add->id }}" id="deletejob" for="delete"  class="btn btn-danger">
 							<i class="fa fa-trash"></i>
 						</button>
-						 <form id="deleteform{{ $add->id }}" action="{{ route('sell.destroy', $add->id) }}" method="post">
-						 	@csrf
-						 	{{ method_field('delete') }}
-				    	<input type="hidden" value="{{ $add->id }}" name="sellid" />
-				    </form>
+						<form id="deleteform{{ $add->id }}" action="{{ route('sell.destroy', $add->id) }}" method="post">
+							 	@csrf
+							 	{{ method_field('delete') }}
+					    	<input type="hidden" value="{{ $add->id }}" name="sellid" />
+					    </form>
 					</div>
 				</div>
 			</div>
 		@endforeach
 	</div>
 	<div class="d-flex justify-content-center">
-	<center>
-	  <ul class="pagination">
-		   {{ $adds->links() }}
-	  </ul>
-	</center>
+		<center>
+		  <ul class="pagination">
+			   {{ $adds->links() }}
+		  </ul>
+		</center>
+	</div>
 </div>
 @endsection

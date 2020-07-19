@@ -6,7 +6,7 @@
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
+| routes are loaded by the RouteServiceProvide r within a group which
 | contains the "web" middleware group. Now create something great!
 |
 */
@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test',function(){
-	return view('welcome');
+	return view('welcome');  
 });
 
 Auth::routes();
@@ -85,10 +85,65 @@ Route::get('/search/{search}','searchController@search'); // for search bar ..
 	// End Fillters
 /* ----------------------------------------------------------------- */
 Route::middleware('auth')->group(function(){
+	Route::prefix('newlook')->namespace('newlook')->group(function(){
+			// main routes ..
+			Route::get('/main','homeController@main')->name('newlook.landing');
+			 
+			Route::get('/my-schedual','homeController@myschedual')->name('newlook.schedual');
+			Route::get('/photoeditor','homeController@photoeditor')->name('newlook.photoeditor'); // photoeditor ..
+			
+			// social section.. 
+			Route::namespace('social')->group(function(){
+				Route::get('edit-profile','socialcontroller@editprofile')->name('social.edit-profile');
+				Route::get('account-settings','socialcontroller@accountsettings')->name('social.account-settings');
+				Route::get('account-invoice','socialcontroller@invoices')->name('social.account-invoice');
+				Route::get('messages','socialcontroller@messages')->name('social.messages');
+				Route::get('kunnecs','socialcontroller@kunnecs')->name('social.kunnecs');
+				Route::get('notification','socialcontroller@notification')->name('social.notification');
+				Route::get('mutual-kunnecs','socialcontroller@mutualk')->name('social.mutual-kunnecs');
+				Route::get('archived-posts','socialcontroller@archive')->name('social.archived-posts');
+				Route::get('reported-posts','socialcontroller@reportedposts')->name('social.reported-posts');
+				Route::namespace('events')->group(function(){
+					Route::resource('/event','eventscontroller');
+					Route::prefix('event')->group(function(){
+						Route::get('/list','eventscontroller@invites')->name('social.invites');
+					});
+				});
+			}); 
+			
+			// kunnec to me ..
+			Route::prefix('kunnectome')->namespace('tome')->group(function(){
+		       	Route::get('/add','tomeController@index')->name('newlook.tomeadd');
+		       	Route::get('/opportunities','tomeController@jobs')->name('newlook.tomejobs');   
+			});
+			 // kunnec to you
+			Route::prefix('user')->namespace('toyou')->group(function(){
+				//Route::get('/create','toyoucontroller@create')->name('newlook.createuser');
+				Route::get('/{id}','toyoucontroller@profile')->name('newlook.user');
+			});
+			// kunnec shop ..
+			Route::namespace('sell')->group(function(){
+				Route::resource('/shop','shopcontroller');
+				//Route::get()->;
+			});
+			
+			// kunnec sell ..
+			Route::namespace('sell')->prefix('test')->group(function(){
+				Route::prefix('sell')->group(function(){
+					Route::get('/myadds','sellcontroller@myadds')->name('newlook.myadds');
+				});
+				Route::resource('/sells','sellcontroller');
+			});
+	});
+	# new routes ..
+	Route::namespace('newlook')->group(function(){
+		Route::get('/', 'homeController@home')->name('home');
+	});
+	# end new routes ..
 		/*--------------------------------------------------------------------*/
 		/* Member pages                                           */                                              
 		/* ---------------------------------------------------------------- */
-		Route::get('/home','memberhomeController@home')->name('home'); // home after login ..
+		//Route::get('/home','memberhomeController@home')->name('home'); // home after login ..
 		Route::get('/category/{id}','searchController@category'); // for search bar ..
 		Route::get('/post','memberhomeController@post'); // post ..
 		Route::get('/browse','memberhomeController@browse'); // browser ..

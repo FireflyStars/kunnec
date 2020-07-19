@@ -39,7 +39,7 @@ class User extends Authenticatable
     }
     // friends ...
     public function friends(){
-        return $this->friendsOfMine->merge($this->friendsOf);
+        return $this->belongsToMany('App\user','friends','friend_id','user_id');
     }
     public function information(){
         //has one ..

@@ -14310,7 +14310,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vform___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vform__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_sweetalert2__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_sweetalert2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_sweetalert2__);
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -14343,6 +14342,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('opportunity', __webpack_r
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('kunnec-to-you', __webpack_require__(63)).defualt;
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('kunnec-to-you-post', __webpack_require__(65)).defualt;
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('kunnec-to-you-my-services', __webpack_require__(67)).defualt;
+
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: '#app'
 
@@ -63711,7 +63711,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
       data: function data() {
@@ -64340,6 +64339,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -64442,7 +64445,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h2", [
+    return _c("label", [
       _c("i", { staticClass: "fa fa-tasks", attrs: { "aria-hidden": "true" } }),
       _vm._v(" Opportunities ")
     ])
@@ -64451,9 +64454,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("button", { staticClass: "btn btn-info float-right" }, [
-      _c("i", { staticClass: "fa fa-arrow-right" }),
-      _vm._v(" Continue..")
+    return _c("a", { attrs: { href: "index.php" } }, [
+      _c("button", { staticClass: "btn btn-info float-right" }, [
+        _c("i", { staticClass: "fa fa-arrow-right" }),
+        _vm._v(" Continue..\n\t\t\t\t\t ")
+      ])
     ])
   },
   function() {
@@ -64782,7 +64787,7 @@ var staticRenderFns = [
                   "We all know how hard it can be to make a site look like the demo, so to make your start into the world of X as easy as possible we have included the demo content from our showcase site.We all know how hard it can be to make a site look like the demo, so to make your start into the world of X as easy as possible we have included the demo content from our showcase site."
                 )
               ]),
-              _vm._v("\n\t\t\t    Contact: "),
+              _vm._v("\n\t\t\t\t    Contact: "),
               _c("a", { attrs: { href: "" } }, [_vm._v("info@asadmukhtar.com")])
             ])
           ]

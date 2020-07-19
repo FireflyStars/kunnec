@@ -13,7 +13,7 @@
   .nav-link {
     color: green !important;
   }
-</style>
+</style> 
 <div class="app-content content">
     <div class="content-wrapper">
       <div class="content-body">

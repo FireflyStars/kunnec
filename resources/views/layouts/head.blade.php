@@ -16,6 +16,7 @@
         <!-- GOOGLE TRANSLATE -->
         <script type="text/javascript">function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}</script>
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="{{ asset('js/signup.js') }}" defer></script>
     </head>
   
     <body>
@@ -34,13 +35,20 @@
                 </li>
             </ul>
             
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Username or Email">
-                <input class="form-control mr-sm-2 my-2" type="search" placeholder="Password">
-                <button class="btn btn-danger mr-2" type="submit">Sign In</button>
-                <button class="btn btn-warning mr-2" type="button" data-toggle="modal" data-target="#signupModal"><font color="#FFFFFF">Sign Up</font></button>
+            <div class="form-inline my-2 my-lg-0">
+                <form action="{{ url('/login') }}" method="post">
+                    {{ csrf_field() }}
+                    <input class="form-control mr-sm-2" type="search" placeholder="Username or Email" name="email" value="{{ old('email') }}" required autofocus>
+                    <input class="form-control mr-sm-2 my-2" type="password" placeholder="Password"  name="password" required>
+                    <button class="btn btn-danger mr-2" type="submit">Sign In</button>
+                </form>
+                <a href="{{ url('/register') }}">
+                <button class="btn btn-warning mr-2" type="button">      
+                    <font color="#FFFFFF">Sign Up</font>
+                </button>
+                </a>
                 <p><button class="terms" type="button" data-toggle="modal" data-target="#FPModal"><a href="#!"><font color="FFFFFF">Forgot Password?</font></a></button>
-            </form>
+            </div>
         </div>
     </nav>
     

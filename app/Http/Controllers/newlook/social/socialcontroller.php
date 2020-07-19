@@ -5,15 +5,25 @@ namespace App\Http\Controllers\newlook\social;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth; // current user for getting current user ..
+use App\model\post; // getting all posts ..
+use App\Model\friendship; // getting all requests ..
+use App\user; // getting all user ..
+use Carbon\Carbon; // for the calculation purpose ..
+use App\model\friend; // friends getting from database ..
 use App\model\socialmedia; // social media .. 
 use App\model\information;
+use App\model\education; // education ..
+use App\model\credit; // credit ..
 class socialcontroller extends Controller
 {
     // 
     // edit profile .. 
     public function editprofile(){
+        $cuser     = Auth::user(); // id .
+        $social    = Auth::user()->socialmedia; // social media ..
+        $information = Auth::user()->information; // getting privacy information ..
  
-        return view('newlook.social.editprofile');
+        return view('newlook.social.editprofile',compact('cuser','social','information'));
     }
 
     // Account settings ..

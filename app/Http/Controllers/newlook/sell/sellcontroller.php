@@ -28,6 +28,11 @@ class sellcontroller extends Controller
         return view('newlook.kunnec.kunnecshop.adds',compact('adds'));
     }
 
+    // my adds ..
+    public function myadds(){
+        $adds = kunnecsell::orderby('id','desc')->paginate(12);
+        return view('newlook.kunnec.kunnecshop.myadds',compact('adds'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -42,7 +47,8 @@ class sellcontroller extends Controller
         $country = country::where('id',$code)->first();
         $category   = category::where('division','3')->get();
         $states     = state::where('country_id',$country->id)->get();
-        return view('newlook.kunnec.kunnecshop.create',compact('category','states'));
+        $adds = kunnecsell::orderby('id','desc')->paginate(12);
+        return view('newlook.kunnec.kunnecshop.create',compact('category','states','adds'));
     }
 
     /**

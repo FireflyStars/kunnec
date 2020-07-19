@@ -179,77 +179,73 @@
 									@if(!empty($social))					        
 								        <div class="card-body">
 								          <form action="{{ route('socialmedia.update', Auth::id()) }}" method="post">
-								          	 {{method_field('PUT')}}
-								          	 {{csrf_field()}}
-								                <div class="col-md-10">
-								                    <label for="full name">Your Website</label>
-								                    <input type="url" value="{{ $social->website }}" class="form-control" name="website" />
-								                </div><!-- /.col-lg-6 -->
-								            
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-facebook"></i> - Facebook</label>
-								                    <input type="url" value="{{ $social->facebook }}" class="form-control" name="facebook" required/>
-								                </div><!-- /.col-lg-6 -->
-								   
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-instagram"></i> - Instagram</label>
-								                    <input type="url" class="form-control" value="{{ $social->instagram }}" name="instagram" />
-								                </div><!-- /.col-lg-6 -->
-
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-twitter"></i> - Twitter</label>
-								                    <input type="url" value="{{ $social->twitter }}" class="form-control" name="twitter" />
-								                </div><!-- /.col-lg-6 -->
-
-								               <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-youtube"></i> - Youtube</label>
-								                    <input type="url" value="{{ $social->youtube }}" class="form-control" name="youtube" />
-								               </div><!-- /.col-lg-6 -->
-
-								              
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-soundcloud"></i> - Soundcloud</label>
-								                    <input type="url" value="{{ $social->soundcloud }}" class="form-control" name="soundcloud" />
-								                </div><!-- /.col-lg-6 -->
-
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-github"></i> - Github</label>
-								                    <input type="url" class="form-control" value="{{ $social->github }}"  name="github" />
-								                </div><!-- /.col-lg-6 -->
-
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-google-plus"></i> - Google Plus</label>
-								                    <input type="url" class="form-control" value="{{ $social->gplus }}"  name="gplus" />
-								                </div><!-- /.col-lg-6 -->
-
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-tumblr"></i> - Tumblr</label>
-								                    <input type="url" value="{{ $social->tumblr }}" class="form-control" name="tumblr" />
-								                </div><!-- /.col-lg-6 -->
-
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-whatsapp"></i> - Whatsapp</label>
-								                    <input type="text" value="{{ $social->whatsapp }}" class="form-control" name="whatsapp" />
-								                </div><!-- /.col-lg-6 -->
-
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-pinterest"></i> - Pinterest</label>
-								                    <input type="url" value="{{ $social->pintrest }}" class="form-control" name="pintrest" />
-								                </div><!-- /.col-lg-6 -->
-
-							                  	<div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-linkedin"></i> - LinkedIn</label>
-								                    <input type="url" value="{{ $social->linkdn }}" class="form-control" name="linkedn" />
-								                </div><!-- /.col-lg-6 -->
-
-								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-reddit"></i> - Reddit</label>
-								                    <input type="url" value="{{ $social->reddit }}" class="form-control" name="reddit" />
-								                </div><!-- /.col-lg-6 -->
-								                <div class="col-md-10" style="margin-top: 5px;">
-								                	<button type="submit" class="btn btn-danger">Update</button>
-								                </div>
-								                
+									          	 {{method_field('PUT')}}
+									          	 {{csrf_field()}}
+									                <div class="col-md-10">
+									                    <label for="full name">
+									                    	Your Website
+									                    </label>
+									                    <input type="url" value="{{ $social->website }}" class="form-control" name="website" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name">
+									                    	<i class="fa fa-facebook"></i> - Facebook
+									                    </label>
+									                    <input type="url" value="{{ $social->facebook }}" class="form-control" name="facebook" required/>
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-instagram"></i> - Instagram</label>
+									                    <input type="url" class="form-control" value="{{ $social->instagram }}" name="instagram" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-twitter"></i> - Twitter</label>
+									                    <input type="url" value="{{ $social->twitter }}" class="form-control" name="twitter" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-youtube"></i> - Youtube</label>
+									                    <input type="url" value="{{ $social->youtube }}" class="form-control" name="youtube" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-soundcloud"></i> - Soundcloud</label>
+									                    <input type="url" value="{{ $social->soundcloud }}" class="form-control" name="soundcloud" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-github"></i> - Github</label>
+									                    <input type="url" class="form-control" value="{{ $social->github }}"  name="github" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name">
+									                    	<i class="fa fa-google-plus"></i> - Google Plus
+									                    </label>
+									                    <input type="url" class="form-control" value="{{ $social->gplus }}"  name="gplus" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-tumblr"></i> - Tumblr</label>
+									                    <input type="url" value="{{ $social->tumblr }}" class="form-control" name="tumblr" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-whatsapp"></i> - Whatsapp</label>
+									                    <input type="text" value="{{ $social->whatsapp }}" class="form-control" name="whatsapp" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name"><i class="fa fa-pinterest"></i> - Pinterest</label>
+									                    <input type="url" value="{{ $social->pintrest }}" class="form-control" name="pintrest" />
+									                </div><!-- /.col-lg-6 -->
+								                  	<div class="col-md-10">
+									                    <label for="full name">
+									                    	<i class="fa fa-linkedin"></i> - LinkedIn
+									                    </label>
+									                    <input type="url" value="{{ $social->linkdn }}" class="form-control" name="linkedn" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10">
+									                    <label for="full name">
+									                    	<i class="fa fa-reddit"></i> - Reddit
+									                    </label>
+									                    <input type="url" value="{{ $social->reddit }}" class="form-control" name="reddit" />
+									                </div><!-- /.col-lg-6 -->
+									                <div class="col-md-10" style="margin-top: 5px;">
+									                	<button type="submit" class="btn btn-danger">Update</button>
+									                </div>
 								           </form>
 								        </div>
 								    @else
@@ -293,17 +289,23 @@
 								                </div><!-- /.col-lg-6 -->
 
 								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-google-plus"></i> - Google Plus</label>
+								                    <label for="full name">
+								                    	<i class="fa fa-google-plus"></i> - Google Plus
+								                    </label>
 								                    <input type="url" class="form-control"  name="gplus" />
 								                </div><!-- /.col-lg-6 -->
 
 								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-tumblr"></i> - Tumblr</label>
+								                    <label for="full name">
+								                    	<i class="fa fa-tumblr"></i> - Tumblr
+								                    </label>
 								                    <input type="url" class="form-control" name="tumblr" />
 								                </div><!-- /.col-lg-6 -->
 
 								                <div class="col-md-10">
-								                    <label for="full name"><i class="fa fa-whatsapp"></i> - Whatsapp</label>
+								                    <label for="full name">
+								                    	<i class="fa fa-whatsapp"></i> - Whatsapp
+								                    </label>
 								                    <input type="text" class="form-control" name="whatsapp" />
 								                </div><!-- /.col-lg-6 -->
 

@@ -9,13 +9,20 @@
 	<!-- Favicons -->
     <link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
     <!-- Font Awesome JS -->
-   <script type="text/javascript" src="{{ asset('newlook/js/all.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('newlook/js/all.min.js') }}"></script>
 
-   <link rel="stylesheet" href="{{ asset('newlook/bootstrap/css/bootstrap.css') }}">
-   <link rel="stylesheet" href="{{ asset('newlook/css/home_navsb.css') }}">
-   <link rel="stylesheet" href="{{ asset('newlook/assets/lib/select2/select2.min.css') }}">
-   <link rel="stylesheet" href="{{ asset('newlook/assets/lib/flatpickr/flatpickr.min.css') }}">
-   <link rel="stylesheet" href="{{ asset('newlook/assets/lib/dropzone/dropzone.min.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('newlook/js/event.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{{ asset('newlook/css/home_navsb.css') }}" />
+    <link rel="stylesheet" href="{{ asset('newlook/assets/lib/select2/select2.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('newlook/assets/lib/flatpickr/flatpickr.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('newlook/assets/lib/dropzone/dropzone.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('newlook/css/shop_card.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Google Translate -->
     <script type="text/javascript">
@@ -29,52 +36,49 @@
 </head>
 <style type="text/css">
       .opportunity-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
 
-  .op-list{
-    float: left;
-    margin-left:20px;
-  }
-  .btn {
-    border-radius:0px;
-  }
-  .btn {
-    border-radius: 0px;
-  }
+      .op-list{
+        float: left;
+        margin-left:20px;
+      }
+      .btn {
+        border-radius:0px;
+      }
 
-  .jumbotron{
-    background-color: white !important;
-    margin-top:10px;
-  }
-  .card {
-    background-color: white;
-    margin-bottom: 10px;
-  }
-  .card-footer {
-    background-color: white;
-  }
-  .card-header {
-    background-color: white;
-  }
-  a {
-    border-radius: 0px;
-  }
-  .form-control {
-    border-radius: 0px;
-  }
-  button {
-    border-radius: 0px;
-  }
-  .jumbotron{
-    border-radius: 0px;
-  }
-html {
-  scroll-behavior: smooth;
-}
+      .jumbotron{
+        background-color: white !important;
+        margin-top:10px;
+      }
+      .card {
+        background-color: white;
+        margin-bottom: 10px;
+      }
+      .card-footer {
+        background-color: white;
+      }
+      .card-header {
+        background-color: white;
+      }
+      a {
+        border-radius: 0px;
+      }
+      .form-control {
+        border-radius: 0px;
+      }
+      button {
+        border-radius: 0px;
+      }
+      .jumbotron{
+        border-radius: 0px;
+      }
+      html {
+       scroll-behavior: smooth;
+      }
 </style>
 <body>
      <!-- Start Wrapper -->
@@ -86,10 +90,11 @@ html {
             </div>
             <ul class="list-unstyled components">
                 <p>
-                    <img src="{{ asset('newlook/images/users/profiles/sabrina.jpg') }}" width="50px" height="50px" class="rounded-circle img-border box-shadow-1" alt="Card image"> Sabrina
+                    <img src="{{ asset('uploads') }}/{{ Auth::user()->dp }}" width="50px" height="50px" class="rounded-circle img-border box-shadow-1" alt="Card image"> 
+                    {{ Auth::user()->fname }} {{ Auth::user()->lname }} 
                 </p>
                 <li>
-                    <a href="{{ route('newlook.home') }}">
+                    <a href="{{ route('home') }}">
                         <i class="fas fa-home"></i> Home
                     </a>
                     <a href="{{ route('newlook.schedual') }}">
@@ -102,8 +107,7 @@ html {
                         <i class="fas fa-users"></i> Social
                     </a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="{{ route('social.edit-profile') }}" dats-target="edit-profile">
+                             <a href="{{ route('social.edit-profile') }}" dats-target="edit-profile">
                                 Edit Profile
                             </a>
                         </li>
@@ -147,7 +151,7 @@ html {
                                         <a href="{{ route('event.create') }}"> Create an Event</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('social.invites') }}"> List of Event Invites</a>
+                                        <a href="#"> List of Event Invites</a>
                                     </li>
                                 </ul>
                         </li>
@@ -176,6 +180,9 @@ html {
                                         <a href="{{ route('newlook.tomeadd') }}"> Post Opportunity</a>
                                     </li>
                                     <li>
+                                        <a href="{{ route('newlook.tomejobs') }}"> Your Posts</a>
+                                    </li>
+                                    <li>
                                         <a href="{{ route('newlook.tomejobs') }}">opportunities</a>
                                     </li>
                             </ul>
@@ -185,12 +192,9 @@ html {
                             </a>
                             <ul class="collapse list-unstyled" id="kunnectoyou">
                                     <li>
-                                        <a href="pages/course/kunnec_courses.php"> Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="pages/course/k_course_pw.php">Settings</a>
-                                    </li>
-                            </ul>.
+                                        <a href="{{ route('newlook.user', Auth::id()) }}"> Your Profile </a>
+                                    </li>       
+                            </ul>
 
 
 
@@ -200,10 +204,13 @@ html {
                             </a>
                             <ul class="collapse list-unstyled" id="kunnecshop">
                                     <li>
-                                        <a href="{{ route('sells.create') }}"> Create Add </a>
+                                        <a href="{{ route('sells.index') }}"> Home </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('sells.index') }}"> Adds </a>
+                                        <a href="{{ route('shop.index') }}"> My Store </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('sells.create') }}"> Create Add </a>
                                     </li>
                             </ul>
                         </li>
@@ -351,7 +358,7 @@ html {
                         <span></span>
                         <span></span>
                     </button>
-                    <form> v
+                    <form>
                          <input type="search" placeholder="Search">
                     </form>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FFFFFF; color: #009900; border-color: #009900;">
@@ -380,20 +387,21 @@ html {
                 </div>
             </nav>
             <div class="col-lg-12 pr-lg-2">
-                <div class="card mb-3 mt-3 mt-lg-0">
-                        <div class="card-body fs--1">
-                          <div class="media"><span class="fa fa-bolt fs-0 text-warning"></span>
-                            <div class="media-body ml-2">
-                                <a class="font-weight-semi-bold" href="#">Kunnec Announcements:  
-                                    <span1 class="badge badge-danger"> 4</span1>
-                                </a>
+                @if(!empty($alert))
+                    <div class="card mb-3 mt-3 mt-lg-0">
+                            <div class="card-body fs--1">
+                              <div class="media"><span class="fa fa-bolt fs-0 text-warning"></span>
+                                <div class="media-body ml-2">
+                                    <a class="font-weight-semi-bold" href="#">Kunnec Announcements:  
+                                        <span1 class="badge badge-danger"> 4</span1>
+                                    </a>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                </div>
-            
+                    </div>
+                @endif
                 <!-- Mid Content -->
-                    @yield('content')
+                @yield('content')
                 <!-- End Mid Content -->
 
             </div>
@@ -410,11 +418,15 @@ html {
     <script src="{{ asset('js/uploads.js') }}"></script>
 
     <!-- End files  -->
+    <!--
     <script type="text/javascript" src="{{ asset('newlook/js/jquery-3.4.1.min.js') }}"></script>
+    -->
     <!-- Sidebar Toggle -->
     <script type="text/javascript" src="{{ asset('newlook/js/sbt.js') }}"></script>
     <script src="{{ asset('newlook/assets/js/popper.min.js') }}"></script>
+    <!--
     <script src="{{ asset('newlook/assets/js/bootstrap.min.js') }}"></script>
+    -->
     <script src="{{ asset('newlook/assets/lib/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('newlook/assets/lib/select2/select2.min.js') }}"></script>
     <script src="{{ asset('newlook/assets/lib/flatpickr/flatpickr.min.js') }}"></script>

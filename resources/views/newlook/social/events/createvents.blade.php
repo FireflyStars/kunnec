@@ -48,37 +48,37 @@
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label for="start-date">Start Date</label>
-                        <input class="form-control datetimepicker" name="start-date" id="start-date" type="text">
+                        <input class="form-control datetimepicker" name="startdate" id="start-date" type="text">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label for="start-time">Start Time</label>
-                        <input class="form-control datetimepicker" id="start-time" name="start-time" type="text" data-options='{"enableTime":true,"noCalendar":true,"dateFormat":"H:i"}'>
+                        <input class="form-control datetimepicker" id="starttime" name="starttime" type="text" data-options='{"enableTime":true,"noCalendar":true,"dateFormat":"H:i"}'>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label for="end-date">End Date</label>
-                        <input class="form-control datetimepicker" name="end-date" id="end-date" type="text">
+                        <input class="form-control datetimepicker" name="enddate" id="end-date" type="text">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group">
                         <label for="end-time">End Time</label>
-                        <input class="form-control datetimepicker" name="end-time" id="end-time" type="text" data-options='{"enableTime":true,"noCalendar":true,"dateFormat":"H:i"}'>
+                        <input class="form-control datetimepicker" name="endtime" id="end-time" type="text" data-options='{"enableTime":true,"noCalendar":true,"dateFormat":"H:i"}'>
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group mb-0">
                         <label for="registration-deadline">Registration Deadline</label>
-                        <input class="form-control datetimepicker" name="reg-deadline" id="registration-deadline" type="text">
+                        <input class="form-control datetimepicker" name="regdeadline" id="registration-deadline" type="text">
                       </div>
                     </div>
                     <div class="col-sm-6">
                       <div class="form-group mb-0">
                         <label for="time-zone">Timezone</label>
-                        <select class="custom-select" id="time-zone" name="time-zone">
+                        <select class="custom-select" id="time-zone" name="timezone">
                           <option>GMT-12:00 Etc/GMT-12</option>
                           <option>GMT-11:00 Etc/GMT-11</option>
                           <option>GMT-11:00 Pacific/Midway</option>
@@ -193,20 +193,26 @@
                     </div>
                     <div class="col-sm-4">
                       <div class="form-group">
-                        <label for="event-city">City</label>
-                        <input class="form-control" name="city" id="event-city" type="text" placeholder="City">
+                        <label for="event-country">Country</label>
+                        <select class="custom-select custom-select-sm" id="country" name="country">
+                          @foreach($countries as $country)
+                            <option value="{{ $country->id }}">{{ $country->name }}</option>
+                          @endforeach
+                        </select>
                       </div>
                     </div>
                     <div class="col-sm-4">
                       <div class="form-group">
                         <label for="event-state">State</label>
-                        <input class="form-control" id="event-state" name="state" type="text" placeholder="state">
+                        <select class="custom-select custom-select-sm" name="state" id="state">
+                        </select>
                       </div>
                     </div>
                     <div class="col-sm-4">
                       <div class="form-group">
-                        <label for="event-country">Country</label>
-                        <input class="form-control" id="event-country"  name="country" type="text" placeholder="country">
+                        <label for="event-city">City</label>
+                         <select class="custom-select custom-select-sm" name="city" id="city">
+                        </select>
                       </div>
                     </div>
                     <div class="col-12">
@@ -221,92 +227,55 @@
             <div class="card mb-3">
                   <div class="card-header">
                     <h5 class="mb-0">Ticket Price</h5>
+                    Free <input type="radio" ticket="type" name="ticket_type" value="free" />
+                    Paid <input type="radio" ticket="type" name="ticket_type" value="paid" />
+                    Donation <input type="radio" ticket="type" name="ticket_type" value="donation" />
                   </div>
-                  <div class="card-body bg-light">
-                    <div class="mb-3">
-                       Free <input type="radio" name="ticket_type" value="free" />
-                       Paid <input type="radio" name="ticket_type" value="paid" />
-                       Donation <input type="radio" name="ticket_type" value="donation" />
-                    </div>
-                    <!--
-                    <div class="mb-3">
-                      <button class="btn btn-falcon-default btn-sm" type="button">Free<span class="d-none d-sm-inline"> Ticket</span></button>
-                      <button class="btn btn-falcon-primary btn-sm ml-2" type="button">Paid<span class="d-none d-sm-inline"> Ticket</span></button>
-                      <button class="btn btn-falcon-default btn-sm ml-2" type="button">Donation</button>
-                    </div>
-                    -->
+                  <div class="card-body bg-light" id="ptype" style="display:none;">
                     <hr>
-                    <h6>Pricing Options:</h6>
-                    <div>
-                      <input name="e-v-p" type="radio" value="Enable varible pricing" />
-                      <label for="customCheck1">Enable varible pricing</label>
-                      <br />
-                      <input name="e-v-p" type="radio" value="Enable varible pricing" type="" name="" />
-                      <label>Enable multi-option purchase mode.</label>
-                    </div>
-                    <table class="table table-bordered mt-2 bg-white">
-                      <thead>
-                        <tr class="fs--1">
-                          <th>Option Name</th>
-                          <th>Price</th>
-                          <th>Default</th>
-                          <th></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            <input class="form-control form-control-sm" type="text" placeholder="Option Name" value="Front desks" name="opt1">
-                          </td>
-                          <td>
-                            <input class="form-control form-control-sm" type="text" placeholder="Price" value="$0.00" name="price1"  />
-                          </td>
-                          <td class="text-center align-middle">
-                            <div class="custom-control custom-radio">
-                              <input class="custom-control-input" id="customRadio1" type="radio" name="optdef" checked />
-                              <label class="custom-control-label" for="customRadio1"></label>
-                            </div>
-                          </td>
-                          <td class="text-center align-middle">
-                            <button class="btn btn-link btn-sm"><span class="fas fa-times-circle text-danger" data-fa-transform="shrink-3"></span></button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <input class="form-control form-control-sm" type="text" placeholder="Option Name" value="Green gallery" name="opt2">
-                          </td>
-                          <td>
-                            <input class="form-control form-control-sm" type="text" placeholder="Price" value="$5.00" name="price2" />
-                          </td>
-                          <td class="text-center align-middle">
-                            <div class="custom-control custom-radio">
-                              <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio" name="optdef"  />
-                              <label class="custom-control-label" for="customRadio2"></label>
-                            </div>
-                          </td>
-                          <td class="text-center align-middle">
-                            <button class="btn btn-link btn-sm"><span class="fas fa-times-circle text-danger" data-fa-transform="shrink-3"></span></button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <input class="form-control form-control-sm" type="text" placeholder="VIP" value="VIP" name="opt3" />
-                          </td>
-                          <td>
-                            <input class="form-control form-control-sm" type="text" placeholder="Price" value="$20.00" name="price3">
-                          </td>
-                          <td class="text-center align-middle">
-                            <div class="custom-control custom-radio">
-                              <input class="custom-control-input" id="customRadio3" type="radio" name="customRadio" name="optdef">
-                              <label class="custom-control-label" for="customRadio3"></label>
-                            </div>
-                          </td>
-                          <td class="text-center align-middle">
-                            <button class="btn btn-link btn-sm"><span class="fas fa-times-circle text-danger" data-fa-transform="shrink-3"></span></button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                      <h6>Pricing Options:</h6>
+                      <div>
+                        <input name="e_v_p" type="radio" value="1" />
+                        <label>Enable varible pricing</label>
+                        <br />
+                        <input name="e_v_p" type="radio" value="2" />
+                        <label>Enable multi-option purchase mode.</label>
+                      </div>
+                      <button class="btn btn-success btn-sm" type="button" id="addp">
+                        + Add New
+                      </button>
+                      <table class="table table-bordered mt-2 bg-white">
+                        <thead>
+                          <tr class="fs--1">
+                            <th>Option Name</th>
+                            <th>Price</th>
+                            <th>Default</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody id="optype">
+                          <tr id="0">
+                            <td>
+                              <input class="form-control form-control-sm" type="text" placeholder="Option Name" value="Front desks" name="opt1[]">
+                            </td>
+                            <td>
+                              <input class="form-control form-control-sm" type="text" placeholder="Price" value="$0.00" name="price1[]"  />
+                            </td>
+                            <td class="text-center align-middle">
+                              <div class="custom-control custom-radio">
+                                <input class="custom-control-input" value="1" id="customRadio1" type="radio" name="optdef[]" checked />
+                                <label class="custom-control-label" for="customRadio1"></label>
+                              </div>
+                            </td>
+                            <td class="text-center align-middle">
+                              <button type="button" class="btn btn-link btn-sm" id="del" n="0">
+                                <span class="fas fa-times-circle text-danger" data-fa-transform="shrink-3">
+                                </span>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                   </div>
             </div>
             <div class="card mb-3">
@@ -427,7 +396,9 @@
             <div class="sticky-top sticky-sidebar">
                   <div class="card mb-3 mb-lg-0">
                     <div class="card-header">
-                      <h5 class="mb-0">Other Info</h5>
+                      <h5 class="mb-0">
+                         Other Info
+                      </h5>
                     </div>
                     <div class="card-body bg-light">
                       <div class="form-group">
@@ -435,7 +406,7 @@
                           <label class="mb-0" for="organizer">Organizer</label>
                           <button class="btn btn-link btn-sm pr-0" type="button">Add New</button>
                         </div>
-                        <select class="form-control selectpicker" id="organizer" multiple size="1" name="organizer" data-options='{"placeholder":"Select Organizer..."}'>
+                        <select class="custom-select" id="organizer" size="1" name="organizer">
                           <option>Massachusetts Institute of Technology</option>
                           <option>University of Chicago</option>
                           <option>GSAS Open Labs At Harvard</option>
@@ -447,7 +418,7 @@
                           <label class="mb-0" for="sponsors">Sponsors</label>
                           <button class="btn btn-link btn-sm pr-0" type="button">Add New</button>
                         </div>
-                        <select class="form-control selectpicker" id="sponsors" multiple size="1" name="language" data-options='{"placeholder":"Select Sponsors..."}'>
+                        <select class="custom-select" id="sponsors"  size="1" name="sponsors">
                           <option>Microsoft Corporation</option>
                           <option>Technext Limited</option>
                           <option>Hewlett-Packard</option>
@@ -455,7 +426,7 @@
                       </div>
                       <div class="form-group">
                         <label for="event-type">Event Type</label>
-                        <select class="custom-select" id="event-type" name="event-type">
+                        <select class="custom-select" id="event-type" name="event_type">
                           <option>Select event type...</option>
                           <option>Class, Training, or Workshop</option>
                           <option>Concert or Performance</option>
@@ -467,7 +438,7 @@
                       </div>
                       <div class="form-group">
                         <label for="event-topic">Event Topic</label>
-                        <select class="custom-select" id="event-topic" name="even-topic">
+                        <select class="custom-select" id="event-topic" name="even_topic">
                           <option value="" selected="selected">Select a topic</option>
                           <option>Auto, Boat &amp; Air</option>
                           <option>Business &amp; Professional</option>
@@ -485,7 +456,7 @@
                           <label class="mb-0" for="event-tags">Tags</label>
                           <button class="btn btn-link btn-sm pr-0" type="button">Add New</button>
                         </div>
-                        <select class="form-control selectpicker" id="event-tags" multiple size="1" data-options='{"placeholder":"Select tags"}' name="event-tags">
+                        <select class="form-control selectpicker" id="event-tags" multiple size="1" data-options='{"placeholder":"Select tags"}' name="eventtags">
                           <option>Concert</option>
                           <option>New Year</option>
                           <option>Party</option>
@@ -499,12 +470,17 @@
                       </div>
                       <div class="form-group custom-control custom-radio">
                         <input class="custom-control-input" id="customRadio5" type="radio" name="listingPrivacy">
-                        <label class="custom-control-label" for="customRadio5"> <strong>Private page:</strong></label><small class="form-text mt-0">Accessible only by people you specify. </small>
+                        <label class="custom-control-label" for="customRadio5"> 
+                          <strong>
+                              Private page:
+                          </strong>
+                        </label>
+                        <small class="form-text mt-0">Accessible only by people you specify. </small>
                       </div>
                       <hr class="border-dashed border-bottom-0">
                       <h6>Remaining Tickets</h6>
                       <div class="form-group custom-control custom-checkbox mb-0">
-                        <input class="custom-control-input" name="snort" id="customRadio6" type="checkbox">
+                        <input class="custom-control-input" value="12" name="snort" id="customRadio6" type="checkbox"> 
                         <label class="custom-control-label" for="customRadio6">Show the number of remaining tickets.</label>
                       </div>
                     </div>
@@ -515,13 +491,15 @@
       <div class="card mt-3">
         <div class="card-body">
           <div class="row justify-content-between align-items-center">
-                <div class="col-md">
-                  <h5 class="mb-2 mb-md-0">Nice Job! You're almost done</h5>
-                </div>
-                <div class="col-auto">
-                  <button type="submit" class="btn btn-falcon-default btn-sm mr-2">Save</button>
-                  <button class="btn btn-falcon-primary btn-sm">Make your event live </button>
-                </div>
+            <div class="col-md">
+              <h5 class="mb-2 mb-md-0">
+                  Nice Job! You're almost done
+              </h5>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-falcon-default btn-sm mr-2">Save</button>
+              <button class="btn btn-falcon-primary btn-sm">Make your event live </button>
+            </div>
           </div>
         </div>
       </div>

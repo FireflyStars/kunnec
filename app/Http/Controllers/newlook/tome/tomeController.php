@@ -9,6 +9,7 @@ use Carbon\Carbon; // for the calculation purpose ..
 use Illuminate\Support\Facades\Auth; // current user for getting current user ..
 use App\model\jobsdoc; 
 use App\model\category;
+use App\country;
 
 class tomeController extends Controller
 {
@@ -19,7 +20,8 @@ class tomeController extends Controller
         return view('newlook.kunnec.kunnectome.add',compact('category')); // home ..
     }
     public function jobs(){ 
-    	return view('newlook.kunnec.kunnectome.posts'); // home ..
+    	 $country = country::all();
+    	return view('newlook.kunnec.kunnectome.posts', compact('country')); // home ..
     }
    
 }
