@@ -11,12 +11,14 @@
         <link rel="stylesheet" href="{{ asset('home/css/bootstrap.css') }}">
         <link rel="stylesheet" href="{{ asset('home/css/main1.css') }}">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+        @yield('css')
         <title>Kunnec | Home </title>
         
         <!-- GOOGLE TRANSLATE -->
-        <script type="text/javascript">function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}</script>
+        <script type="text/javascript">
+            function googleTranslateElementInit() { new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');}
+        </script>
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        <script src="{{ asset('js/signup.js') }}" defer></script>
     </head>
   
     <body>
@@ -77,7 +79,7 @@
 
         });
     </script>
-    <script src="{{ asset('home/jquery/jquery.easing.min.js')}}"></script>
+    <script src="{{ asset('home/jquery/jquery-3.4.1.min.js')}}"></script>
     <script src="{{ asset('home/js/popper.min.js') }}"></script>
     <script src="{{ asset('home/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('home/assets/lib/is_js/is.min.js') }}"></script>
@@ -89,9 +91,13 @@
     <script src="{{ asset('home/assets/lib/flatpickr/flatpickr.min.js') }}"></script>
     <script src="{{ asset('home/assets/lib/dropzone/dropzone.min.js') }}"></script>
     <script src="{{ asset('home/assets/lib/lottie/lottie.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/stickyfilljs/stickyfill.min.js') }}"></script>
+    <script src="{{ asset('home/assets/lib/toastr/toastr.min.js') }}"></script>
     <script src="{{ asset('home/assets/js/theme.js') }}"></script>
     <script src="{{ asset('home/assets/lib/@fortawesome/all.min.js') }}"></script>
     <script src="{{ asset('home/assets/lib/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js') }}">
     </script>
+    @yield('js')
+    <script src="{{ asset('js/signup.js') }}" defer> </script>
     </body>
 </html>

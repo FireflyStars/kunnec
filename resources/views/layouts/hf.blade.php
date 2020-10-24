@@ -55,7 +55,7 @@
               </button>
      
               <div class="collapse navbar-collapse navbar-right" style="border:none !important; padding:auto;">
-                    <form style="margin-top: 20px;" action="{{ url('/login') }}" method="post" class="navbar-form navbar-right ml-auto" role="login">
+                    <form style="margin-top: 20px;" action="{{ route('login') }}" method="post" class="navbar-form navbar-right ml-auto" role="login">
                         {{ csrf_field() }}
                         <div class="form-group" style="float: left;">
                             <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
@@ -117,7 +117,8 @@
         <div class="copyright_k">
                 Copyright &copy; 2018 <a href="http://www.kunnec.com" title="KUNNEC">KUNNEC</a>        
         </div>
-</footer>    
+</footer>   
+@yield('js') 
 </body>
 </html>
 

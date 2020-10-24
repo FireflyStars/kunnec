@@ -18,7 +18,7 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-        $country =  country::all();
+        $country =  country::all()->sortBy('name');
         return view('auth.register',compact('country'));
     }
 
@@ -32,6 +32,7 @@ trait AuthenticatesUsers
      */
     public function login(Request $request)
     {
+        // dd($request);
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
@@ -154,6 +155,7 @@ trait AuthenticatesUsers
      */
     public function logout(Request $request)
     {
+        // dd("ok");
         $this->guard()->logout();
 
         $request->session()->invalidate();

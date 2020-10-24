@@ -18,6 +18,17 @@ class searchController extends Controller {
        $city = city::where('state_id',$id)->get();
        return $city;
     }
+    // its searching state from database ..
+    public function getStates($id){
+        $states = state::where('country_id',$id)->get();
+        return response()->json(['states'=> $states]);
+      // return $id;
+    }
+    // its searching city from database ..
+    public function getCities($id){
+       $cities = city::where('state_id',$id)->get();
+       return response()->json(['cities'=>$cities]);
+    }
     // search for what .. . 
     public function search($name){
           $users = user::where('name','like', '%'.$name.'%')->get();

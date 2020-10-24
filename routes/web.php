@@ -20,7 +20,7 @@ Route::get('/test',function(){
 });
 
 Auth::routes();
-
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 /* --------------------------------------------------------------------------- */
  //Route for verification ..
 Route::get('/user/activation/{token}', 'Auth\RegisterController@userActivation'); 
@@ -80,7 +80,8 @@ Route::prefix('kunnec-to-you')->namespace('toyou')->group(function(){
 Route::get('/state/{state}','searchController@state'); // searching state ..
 Route::get('/city/{city}','searchController@city'); // searching city ....
 Route::get('/search/{search}','searchController@search'); // for search bar ..	
-
+Route::get('/states/{country_id}', 'SearchController@getStates')->name('all.states');
+Route::get('/cities/{state_id}', 'SearchController@getCities')->name('all.cities');
 /* --------------------------------------------------------------------*/
 	// End Fillters
 /* ----------------------------------------------------------------- */
@@ -206,8 +207,8 @@ Route::middleware('auth')->group(function(){
 //  Admin Side Login Routes...  //
 /* -------------------------------------------- */
 Route::prefix('admin')->group(function () {
-	Route::get('login', ['as' => 'admin.login', 'uses' => 'adminAuth\LoginController@showLoginForm']);
-	Route::post('login', 'adminAuth\LoginController@login')->name('admin.login');
+	// Route::get('login', ['as' => 'admin.login', 'uses' => 'adminAuth\LoginController@showLoginForm']);
+	// Route::post('login', 'adminAuth\LoginController@login')->name('admin.login');
 	// Login Routes...
     Route::get('login', ['as' => 'admin.login', 'uses' => 'adminAuth\LoginController@showLoginForm']);
     Route::post('login', ['as' => 'login.post', 'uses' => 'adminAuth\LoginController@login']);

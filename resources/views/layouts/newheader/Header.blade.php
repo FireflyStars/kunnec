@@ -336,7 +336,7 @@
                         K-Ads <span class="badge badge-success">
                         Balance: <span style="color: #FFFFFF;"> 0 </span>
                     </a>
-                    <a href="/">
+                    <a href="{{ route('logout') }}">
                         <i class="fas fa-times-circle"></i> Sign-Out
                     </a>
                 </li>       

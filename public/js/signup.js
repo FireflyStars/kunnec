@@ -1,26 +1,39 @@
 $(document).ready(function(){
+  $('#dob').datepicker({
+    uiLibrary: 'bootstrap4',
+    format: 'yyyy-mm-dd',
+    icons: {
+      rightIcon: '<i class="fa fa-calendar"></i>'
+  }
+  });
   	$("#country").on("change",function(){
-  	   var country = $("#country").val();
-  	   var url = "http://localhost:8000/state/"+country;
-       console.log(url);
+       var country = $("#country").val();
+       $('#state').empty();
+       $('#state').append('<option value="0"> State </option>');       
+  	   var url = ajaxStatesUrl+"/"+country;
   	   $.get(url,function(response){ 
-            for (i = 0; i < response.length; i++) {
-              console.log(response[i].name);
-              $("#state").append("<option value="+response[i].id+">"+response[i].name+"</option>");
+        //  console.log(response.states.length);
+            for (i = 0; i < response.states.length; i++) {
+              state = response.states[i];
+              $("#state").append("<option value="+state.id+">"+state.name+"</option>");
   			    }  
   	   });	 
   	});  
   	$("#state").on("change",function(){
          var state = $("#state").val();         
-         var url   = "http://localhost:8000/city/"+state;
-         console.log(url);
+         var url   = ajaxCitiesUrl+"/"+state;
+         $('#city').empty();
+         $('#city').append('<option value="0"> City </option>');              
+        //  console.log(url);
          $.get(url,function(response){
-       			for (i = 0; i < response.length; i++) { 
-              console.log(response[i]);
-      			  $("#city").append("<option value="+response[i].id+">"+response[i].name+"</option>");
+       			for (i = 0; i < response.cities; i++) { 
+              // console.log(response[i]);
+              city = response.cities[i];
+      			  $("#city").append("<option value="+city.id+">"+city.name+"</option>");
       			}
          });
-  	});
+    });
+    
     // for years ...
     var start = 1900;
     var end = new Date().getFullYear();

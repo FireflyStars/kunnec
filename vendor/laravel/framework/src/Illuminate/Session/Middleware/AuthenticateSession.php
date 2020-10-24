@@ -87,7 +87,7 @@ class AuthenticateSession
      */
     protected function logout($request)
     {
-        $this->auth->logout();
+        $this->auth->logout($request);
 
         $request->session()->flush();
 

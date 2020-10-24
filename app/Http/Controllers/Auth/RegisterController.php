@@ -55,9 +55,7 @@ class RegisterController extends Controller {
             'lname' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
-            'birth_year'  => 'required|numeric',
-            'birth_day'   => 'required|numeric',
-            'birth_month' => 'required|numeric', // may be a string
+            'dob' => 'required', // may be a string
         ]);
     }
     /**
@@ -68,8 +66,6 @@ class RegisterController extends Controller {
      */
     protected function create(array $data)
     {
-       $dob = $data['birth_year'].'-'.$data['birth_month'].'-'.$data['birth_day'];
-        
         $user =  User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
@@ -78,7 +74,7 @@ class RegisterController extends Controller {
             'country'=> $data['country'],
             'city'=>$data['city'],
             'state'=>$data['state'],
-            'dob'=>$dob,
+            'dob'=>$data['dob'],
             'gender'=>$data['gender'],
             'plan'=>$data['plan'],
         ]);
@@ -96,14 +92,14 @@ class RegisterController extends Controller {
       if ($validator->passes()){
         $user = $this->create($input)->toArray();
         $user['link'] = str_random(30);
-
+        
         DB::table('user_activations')->insert(['user_id'=>$user['id'],'token'=>$user['link']]);
 
         Mail::send('emails.activation', $user, function($message) use ($user){
           $message->to($user['email']);
           $message->subject('www.kunnec.com - Activation Code');
         });
-        return redirect()->to('login')->with('success',"We sent activation code. Please check your mail.");
+        return redirect('login')->with('success',"We sent activation code. Please check your mail.");
       }
       return back()->with('errors',$validator->errors());
     }
